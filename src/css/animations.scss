@@ -1,0 +1,21 @@
+@keyframes background-shift {
+    from { background-color: #E8ECD5; }
+    10% { background-color: #C5DEDA; }
+    20% { background-color: #C4C8D9; }
+    30% { background-color: #E0D4D6; }
+    40% { background-color: #E9DED7; }
+    50% { background-color: #E8ECD5; }
+    60% { background-color: #E9DED7; }
+    70% { background-color: #E0D4D6; }
+    80% { background-color: #C4C8D9; }
+    90% { background-color: #C5DEDA; }
+    to { background-color: #E8ECD5; }
+}
+
+html {
+  background-color: #f0f2e9;
+  animation-name: background-shift;
+  animation-duration: 360s;
+  animation-iteration-count: infinite;
+  transform: translateZ(0);
+}

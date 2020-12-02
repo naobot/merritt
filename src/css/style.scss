@@ -1,0 +1,59 @@
+@import url('./reset.css');
+@import url('./typography.scss');
+@import url('./animations.scss');
+
+.main-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section {
+  position: relative;
+  margin-bottom: 60px;
+  padding: 20px 40px;
+  height: 800px;
+  div {
+    position: relative;
+  }
+}
+
+.landing-title {
+  position: relative;
+  top: 40%;
+  h1 {
+    text-align: center;
+  }
+}
+
+.work-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.work-title {
+  line-height: 0.8;
+  margin-bottom: 20px;
+}
+.work-desc {
+  z-index: 6;
+  width: 400px;
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+.section-text {
+  column-width: 20rem;
+  column-gap: 30px;
+  column-rule-width: 2px;
+  column-rule-style: solid;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}

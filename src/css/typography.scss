@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Happy Times at the IKOB';
+  src: url('../fonts/happy-times-NG_regular_master_web.woff') format('woff'),
+       url('../fonts/happy-times-NG_regular_master_web.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Happy Times at the IKOB';
+  src: url('../fonts/happy-times-NG_bold_master_web.woff') format('woff'),
+       url('../fonts/happy-times-NG_bold_master_web.woff2') format('woff2');
+  font-style: bold;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Happy Times at the IKOB';
+  src: url('../fonts/happy-times-NG_italic_master_web.woff') format('woff'),
+       url('../fonts/happy-times-NG_italic_master_web.woff2') format('woff2');
+  font-style: italic;
+}
+
+$base-size: 1rem;
+$base-color: #3c211d;
+
+html, body {
+  font-family: 'Happy Times at the IKOB', Times New Roman, serif;
+  color: $base-color;
+  font-size: 1.2 * $base-size;
+  line-height: 1.4;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 4 * $base-size;
+}
+h2 {
+  font-size: 3.5 * $base-size;
+}
+h3 {
+  font-size: 3 * $base-size;
+}
+h4 {
+  font-size: 2.5 * $base-size;
+}
+h5 {
+  font-size: 2 * $base-size;
+}
+h6 {
+  font-size: 1.5 * $base-size;
+}
