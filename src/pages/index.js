@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 export default function Home({ data }) {
   return (
     <div className="main-container">
+
       <section className="section">
         <div className="landing-title"
           data-sal="fade" 
