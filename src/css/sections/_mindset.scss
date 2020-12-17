@@ -1,0 +1,14 @@
+@use '../typography.scss';
+@use '../responsive.scss';
+
+#mindset.work {
+  justify-content: space-around;
+  .work-image {
+    width: 480px;
+    align-self: flex-start
+  }
+  .work-desc {
+    width: 400px;
+    align-self: center;
+  }
+}

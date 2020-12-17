@@ -19,13 +19,13 @@
   font-style: italic;
 }
 
-$base-size: 1rem;
-$base-color: #3c211d;
+$baseSize: 1rem;
+$baseColor: #3c211d;
 
 html, body {
   font-family: 'Happy Times at the IKOB', Times New Roman, serif;
-  color: $base-color;
-  font-size: 1.2 * $base-size;
+  color: $baseColor;
+  font-size: 1.2 * $baseSize;
   line-height: 1.4;
 }
 
@@ -34,20 +34,20 @@ p {
 }
 
 h1 {
-  font-size: 4 * $base-size;
+  font-size: 4 * $baseSize;
 }
 h2 {
-  font-size: 3.5 * $base-size;
+  font-size: 3.5 * $baseSize;
 }
 h3 {
-  font-size: 3 * $base-size;
+  font-size: 3 * $baseSize;
 }
 h4 {
-  font-size: 2.5 * $base-size;
+  font-size: 2.5 * $baseSize;
 }
 h5 {
-  font-size: 2 * $base-size;
+  font-size: 2 * $baseSize;
 }
 h6 {
-  font-size: 1.5 * $base-size;
+  font-size: 1.5 * $baseSize;
 }

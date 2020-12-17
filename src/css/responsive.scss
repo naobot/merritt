@@ -1,0 +1,31 @@
+// Responsive breakpoints
+$small-break: 640px;
+$big-break: 980px;
+
+// Responsive mixins
+@mixin responsive($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+@mixin mobilefirst($res) {
+  @media screen and (min-width: $res) {
+    @content;
+  }
+}
+
+//**
+// Responsive Styles
+//**
+
+@include responsive($big-break) {
+  // e.g. iPad, tablets, small browsers
+}
+
+@include responsive($small-break) {
+  // e.g. iPhone, mobile
+  body {
+    overflow-x: hidden;
+    }
+}

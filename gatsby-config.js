@@ -6,12 +6,21 @@
 const path = require(`path`)
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: 'Merritt Johnson',
+    subtitle: 'Love Song',
+  },
   plugins: [
-    'gatsby-plugin-sass',
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-image`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require('sass'),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,9 +29,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: path.join(__dirname, `src`, `pages`),
+      },
+    },
+    {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
-          threshold: 0.4, // Percentage of an element's area that needs to be visible to launch animation
+          threshold: 0.7, // Percentage of an element's area that needs to be visible to launch animation
           once: false, // Defines if animation needs to be launched once
           disable: false, // Flag for disabling animations
           

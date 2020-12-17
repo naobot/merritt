@@ -1,0 +1,37 @@
+@use '../typography.scss';
+@use '../responsive.scss';
+
+.landing-title {
+  position: relative;
+  margin-top: 20px;
+  h1 {
+    font-size: 6 * typography.$baseSize;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.3rem;
+  }
+  h3 {
+    div {
+      display: inline-block;
+    }
+    font-size: 4 * typography.$baseSize;
+    line-height: 1.3;
+    letter-spacing: -0.05rem;
+  }
+  @include responsive.responsive(responsive.$big-break) {
+    h1 {
+      font-size: 6 * typography.$baseSize * 0.8;
+    }
+    h3 {
+      font-size: 4 * typography.$baseSize * 0.8;
+    }
+  }
+  @include responsive.responsive(responsive.$small-break) {
+    h1 {
+      font-size: 6 * typography.$baseSize * 0.6;
+    }
+    h3 {
+      font-size: 4 * typography.$baseSize * 0.6;
+    }
+  }
+}
