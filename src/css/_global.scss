@@ -1,3 +1,6 @@
+@use "./responsive.scss";
+@use "./typography.scss";
+
 /* contains whole webpage */
 .main-container {
   position: absolute;
@@ -36,8 +39,35 @@
 }
 .work-desc {
   z-index: 6;
+  padding: 10px;
   p {
     font-size: 0.8rem;
   }
 }
-
+@include responsive.responsive(responsive.$big-break) {
+  .work {
+    justify-content: flex-start;
+  }
+  .work-title {
+    font-size: typography.$h6 * 0.8;
+    margin-top: 10px;
+  }
+  .work-desc {
+    p {
+      font-size: typography.$baseSize * 0.6;
+      margin-bottom: 0.6rem;
+    }
+  }
+}
+@include responsive.responsive(responsive.$small-break) {
+  .work-title {
+    font-size: typography.$h6 * 0.6;
+    margin-top: 0;
+  }
+  .work-desc {
+    p {
+      font-size: typography.$baseSize * 0.55;
+      margin-bottom: 0.55rem;
+    }
+  }
+}
