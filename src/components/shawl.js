@@ -3,11 +3,11 @@ import Section from "./section"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-export default function Mindset({ children }) {
+export default function Shawl({ children }) {
   const data = useStaticQuery(
     graphql`
-      query mindsetQuery {
-        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/mindset/"}}) {
+      query shawlQuery {
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/shawl/"}}) {
           edges {
             node {
               fileAbsolutePath
@@ -21,7 +21,7 @@ export default function Mindset({ children }) {
             }
           }
         }
-        file(relativePath: {eq: "Mindset.jpg"}) {
+        file(relativePath: {eq: "FancyShawl.jpg"}) {
           id
           publicURL
           childImageSharp {
@@ -50,7 +50,7 @@ export default function Mindset({ children }) {
           data-sal-duration="600"
           data-sal-easing="ease-in-out-quad"
           >
-          <Img fluid={image.fluid} alt="Mindset (sweetgrass)" />
+          <Img fluid={image.fluid} alt={post.frontmatter.title} />
         </div>
         <div 
           className="work-desc"

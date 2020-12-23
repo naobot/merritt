@@ -6,13 +6,7 @@
 @use './_global.scss';
 @use './sections/_landing.scss';
 @use './sections/_mindset.scss';
+@use './sections/_video.scss';
+@use './sections/_basket.scss';
 
-.section-text {
-  column-width: 20rem;
-  column-gap: 30px;
-  column-rule-width: 2px;
-  column-rule-style: solid;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: justify;
-}
+@use './sections/_curatorial.scss';

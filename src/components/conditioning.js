@@ -1,13 +1,13 @@
 import React from "react"
 import Section from "./section"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import Video from "./video"
 
-export default function Mindset({ children }) {
+export default function Conditioning() {
   const data = useStaticQuery(
     graphql`
-      query mindsetQuery {
-        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/mindset/"}}) {
+      query {
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/conditioning/"}}) {
           edges {
             node {
               fileAbsolutePath
@@ -16,22 +16,9 @@ export default function Mindset({ children }) {
                 credit
                 info
                 title
+                videoUrl
               }
               html
-            }
-          }
-        }
-        file(relativePath: {eq: "Mindset.jpg"}) {
-          id
-          publicURL
-          childImageSharp {
-            fluid(maxWidth: 480) {
-              base64
-              aspectRatio
-              src
-              srcSet
-              sizes
-              originalImg
             }
           }
         }
@@ -39,18 +26,20 @@ export default function Mindset({ children }) {
     `
   );
   const post = data.allMarkdownRemark.edges[0].node;
-  const image = data.file.childImageSharp;
   return (
     <Section>
-      <div id="mindset" className="work">
+      <div id="conditioning" className="work video-work">
         <div 
-          className="work-image" 
+          className="work-video" 
           data-sal="fade" 
           data-sal-delay="100"
           data-sal-duration="600"
           data-sal-easing="ease-in-out-quad"
           >
-          <Img fluid={image.fluid} alt="Mindset (sweetgrass)" />
+          <Video 
+            videoSrcURL={post.frontmatter.videoUrl}
+            videoTitle={post.frontmatter.title}
+          />
         </div>
         <div 
           className="work-desc"
@@ -61,7 +50,6 @@ export default function Mindset({ children }) {
           >
           <h6 className="work-title">{post.frontmatter.title}</h6>
           <p>{post.frontmatter.info}. {post.frontmatter.credit}.</p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
       </div>
     </Section>

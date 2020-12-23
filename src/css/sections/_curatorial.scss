@@ -1,0 +1,13 @@
+@use '../typography.scss';
+@use '../responsive.scss';
+
+.curatorial-text {
+  margin-top: 10px;
+  column-width: 20rem;
+  column-gap: 30px;
+  column-rule-width: 2px;
+  column-rule-style: solid;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}

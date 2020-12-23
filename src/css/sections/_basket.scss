@@ -1,0 +1,25 @@
+@use '../typography.scss';
+@use '../responsive.scss';
+
+#basket.work {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .work-image {
+    width: 480px;
+    align-self: flex-start;
+  }
+  .work-desc {
+    width: 400px;
+    align-self: center;
+  }
+  @include responsive.responsive(responsive.$big-break) {
+    .work-desc {
+      width: 400px;
+    }
+  }
+  @include responsive.responsive(responsive.$small-break) {
+    .work-desc {
+      width: 360px;
+    }
+  }
+}

@@ -22,9 +22,9 @@ export default function Curatorial({ children }) {
   return (
       <Section>
         <div 
-          className="section-text"
-          data-sal="slide-up" 
-          data-sal-delay="100"
+          className="curatorial-text"
+          data-sal="fade" 
+          data-sal-delay="20"
           data-sal-duration="600"
           data-sal-easing="ease-in-out-quad"
           dangerouslySetInnerHTML={{ __html: post.html }}

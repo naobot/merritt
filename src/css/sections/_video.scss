@@ -1,0 +1,23 @@
+@use '../typography.scss';
+@use '../responsive.scss';
+
+.video-work.work {
+  width: 80%;
+  justify-content: center;
+  flex-direction: column;
+  .work-desc {
+    width: 400px;
+    align-self: flex-start;
+    padding-left: 0 !important;
+  }
+  @include responsive.responsive(responsive.$big-break) {
+    .work-desc {
+      width: 400px;
+    }
+  }
+  @include responsive.responsive(responsive.$small-break) {
+    .work-desc {
+      width: 360px;
+    }
+  }
+}
