@@ -41,7 +41,13 @@ export default function Disappearing() {
             videoTitle={post.frontmatter.title}
           />
         </div>
-        <div className="work-desc">
+        <div 
+          className="work-desc"
+          data-sal="fade" 
+          data-sal-delay="100"
+          data-sal-duration="600"
+          data-sal-easing="ease-in-out-quad"
+          >
           <div className="vertical-align">
             <h3>{post.frontmatter.title}</h3>
             <p>Work description here. Aliquam eget laoreet tortor. Aliquam vestibulum quam eget tortor vehicula, sit amet luctus massa lacinia. Quisque iaculis maximus tortor vel venenatis. Praesent efficitur mattis tincidunt. Vivamus convallis leo erat, et sagittis ligula sagittis quis. Aliquam erat volutpat. Aenean ut orci bibendum, cursus erat in, mollis nisl. Donec non mauris nulla. In volutpat diam lacinia tellus rutrum fermentum. Maecenas pretium libero eu urna elementum, sit amet cursus massa vestibulum. Phasellus tortor elit, facilisis ac vulputate non, efficitur eu dolor.</p>
