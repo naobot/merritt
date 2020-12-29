@@ -25,7 +25,7 @@ export default function Basket({ children }) {
           id
           publicURL
           childImageSharp {
-            fluid(maxWidth: 480) {
+            fluid(maxWidth: 320) {
               base64
               aspectRatio
               src
@@ -51,17 +51,13 @@ export default function Basket({ children }) {
           data-sal-easing="ease-in-out-quad"
           >
           <Img fluid={image.fluid} alt={post.frontmatter.title} />
-        </div>
-        <div 
-          className="work-desc"
-          data-sal="slide-up" 
-          data-sal-delay="100"
-          data-sal-duration="600"
-          data-sal-easing="ease-in-out-quad"
-          >
-          <h6 className="work-title">{post.frontmatter.title}</h6>
-          <p>{post.frontmatter.info}. {post.frontmatter.credit}.</p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div
+            className="work-desc"
+            >
+            <em>{post.frontmatter.title}</em>,&nbsp;
+            {post.frontmatter.info}.&nbsp;
+            {post.frontmatter.credit}.
+          </div>
         </div>
       </div>
     </Section>

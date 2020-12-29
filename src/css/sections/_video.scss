@@ -1,14 +1,52 @@
 @use '../typography.scss';
 @use '../responsive.scss';
 
+$videoWidth: 80%;
+
+.work-video {
+  width: $videoWidth;
+  .video {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    iframe, object, embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 .video-work.work {
-  width: 80%;
   justify-content: center;
   flex-direction: column;
   .work-desc {
-    width: 400px;
-    align-self: flex-start;
+    width: $videoWidth;
+    align-self: center;
+    text-align-last: center;
+    height: 100vh;
     padding-left: 0 !important;
+    display: flex;
+    justify-content: center;
+    .vertical-align {
+      align-self: center;
+      width: 480px;
+      h3 {
+        font-size: typography.$h4;
+        line-height: 0.98;
+        margin-bottom: 80px;
+      }
+      p {
+        text-align: justify;
+        text-align-last: center;
+      }
+      .work-info {
+        margin-top: 80px;
+      }
+    }
   }
   @include responsive.responsive(responsive.$big-break) {
     .work-desc {
@@ -19,5 +57,11 @@
     .work-desc {
       width: 360px;
     }
+  }
+}
+
+#disappearing {
+  .work-video {
+    margin: 0 auto;
   }
 }

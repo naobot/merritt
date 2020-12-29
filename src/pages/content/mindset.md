@@ -1,6 +1,6 @@
 ---
 title: "Mindset (sweetgrass)"
-info: "29 x 24 inches, 2019 (archival digital print, edition of 10)"
+info: "29 × 24 inches, 2019 (archival digital print, edition of 10)"
 credit: "Courtesy the artist and Accola Greifen Fine Art"
 ---
 

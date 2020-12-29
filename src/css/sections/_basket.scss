@@ -2,14 +2,16 @@
 @use '../responsive.scss';
 
 #basket.work {
-  justify-content: space-around;
-  flex-wrap: wrap;
+  position: relative;
+  display: block;
   .work-image {
-    width: 480px;
-    align-self: flex-start;
+    width: 320px;
+    position: relative;
+    top: 30px;
+    left: 8%;
   }
   .work-desc {
-    width: 400px;
+    width: 320px;
     align-self: center;
   }
   @include responsive.responsive(responsive.$big-break) {

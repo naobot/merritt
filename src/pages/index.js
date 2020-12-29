@@ -12,6 +12,15 @@ import Visibility from "../components/visibility"
 import Shawl from "../components/shawl"
 
 export default function Home() {
+  const content = <>      <Fall />
+      <Curatorial />
+      <Basket />
+      <Conditioning />
+      <Curatorial />
+      <LoveSong />
+      <PickingUp />
+      <Visibility />
+      <Shawl /></>;
   return (
     <div className="main-container">
 
@@ -22,21 +31,5 @@ export default function Home() {
       <Curatorial />
 
       <Disappearing />
-
-      <Fall />
-
-      <Curatorial />
-
-      <Basket />
-
-      <Conditioning />
-
-      <Curatorial />
-
-      <LoveSong />
-
-      <PickingUp />
-      <Visibility />
-      <Shawl />
     </div>
 )}

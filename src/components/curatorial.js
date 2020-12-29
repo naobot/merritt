@@ -11,6 +11,9 @@ export default function Curatorial({ children }) {
             node {
               fileAbsolutePath
               id
+              frontmatter {
+                title
+              }
               html
             }
           }
@@ -22,13 +25,15 @@ export default function Curatorial({ children }) {
   return (
       <Section>
         <div 
+          id="exhibition-intro"
           className="curatorial-text"
           data-sal="fade" 
           data-sal-delay="20"
           data-sal-duration="600"
           data-sal-easing="ease-in-out-quad"
-          dangerouslySetInnerHTML={{ __html: post.html }}
           >
+          <h1>{post.frontmatter.title}</h1>
+          <div className="text-content" dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
       </Section>
   )

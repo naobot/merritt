@@ -34,7 +34,9 @@ html, body {
   font-size: 1.2 * $baseSize;
   line-height: 1.4;
 }
-
+em {
+  font-style: italic;
+}
 p {
   margin-bottom: 1rem;
 }
