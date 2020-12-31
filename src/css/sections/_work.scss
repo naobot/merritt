@@ -1,0 +1,133 @@
+@use '../typography.scss';
+@use '../responsive.scss';
+
+#mindset.work {
+  position: relative;
+  display: block;
+  .work-image {
+    width: 600px;
+    position: relative;
+    top: 10px;
+    left: 12%;
+  }
+  @include responsive.responsive(responsive.$big-break) {
+    .work-desc {
+      width: 400px;
+    }
+  }
+  @include responsive.responsive(responsive.$small-break) {
+    .work-desc {
+      width: 360px;
+    }
+  }
+}
+
+#basket.work {
+  position: relative;
+  display: block;
+  .work-image {
+    width: 320px;
+    position: relative;
+    top: 30px;
+    left: 8%;
+  }
+  .work-desc {
+    width: 320px;
+    align-self: center;
+  }
+  @include responsive.responsive(responsive.$big-break) {
+    .work-desc {
+      width: 400px;
+    }
+  }
+  @include responsive.responsive(responsive.$small-break) {
+    .work-desc {
+      width: 360px;
+    }
+  }
+}
+
+.work-image {
+  transition: transform 2s ease-in-out;
+}
+.work-image.aligned {
+  transform: scale(0.8);
+}
+
+.work {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  // height: 800px;
+  margin: 0 auto 80px auto;
+  padding: 0;
+}
+.work-title {
+  line-height: 0.95;
+  margin-bottom: 20px;
+  font-size: typography.$h6 * 0.7;
+}
+.work-info {
+  z-index: 6;
+  margin-top: 10px;
+  text-align: justify;
+  text-align-last: center;
+  align-self: center;
+  font-size: typography.$baseSize * 0.6;
+  p {
+    font-size: 0.8rem;
+  }
+}
+$columnCount: 3;
+$columnWidth: 200px;
+$columnGap: 1rem;
+.work-desc {
+  width: 100%;
+  margin-top: 60px;
+  align-self: flex-end;
+  text-align: center;
+  font-size: typography.$baseSize * 0.7;
+  h1 {
+    font-size: typography.$h6;
+    text-align: center;
+  }
+  .full-desc {
+    font-size: typography.$baseSize * 0.8;
+    text-align: justify;
+    position: relative;
+    bottom: 0;
+    // columns: $columnCount $columnWidth;
+    // -webkit-columns: $columnCount $columnWidth;
+    // -moz-columns: $columnCount $columnWidth;
+    // column-gap: $columnGap;
+    // -webkit-column-gap: $columnGap;
+    // -moz-column-gap: $columnGap;
+  }
+}
+@include responsive.responsive(responsive.$big-break) {
+  .work {
+    justify-content: flex-start;
+  }
+  .work-title {
+    font-size: typography.$h6 * 0.8;
+    margin-top: 10px;
+  }
+  .work-desc {
+    p {
+      font-size: typography.$baseSize * 0.6;
+      margin-bottom: 0.6rem;
+    }
+  }
+}
+@include responsive.responsive(responsive.$small-break) {
+  .work-title {
+    font-size: typography.$h6 * 0.6;
+    margin-top: 0;
+  }
+  .work-desc {
+    p {
+      font-size: typography.$baseSize * 0.55;
+      margin-bottom: 0.55rem;
+    }
+  }
+}

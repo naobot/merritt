@@ -25,7 +25,7 @@ export default function Mindset({ children }) {
           id
           publicURL
           childImageSharp {
-            fluid(maxWidth: 320) {
+            fluid(maxWidth: 600) {
               base64
               aspectRatio
               src
