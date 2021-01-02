@@ -31,10 +31,6 @@ export default function PickingUp() {
       <div id="picking-up" className="work video-work">
         <div 
           className="work-video" 
-          data-sal="fade" 
-          data-sal-delay="100"
-          data-sal-duration="600"
-          data-sal-easing="ease-in-out-quad"
           >
           <Video 
             videoSrcURL={post.frontmatter.videoUrl}
@@ -43,10 +39,6 @@ export default function PickingUp() {
         </div>
         <div 
           className="work-desc"
-          data-sal="slide-up" 
-          data-sal-delay="100"
-          data-sal-duration="600"
-          data-sal-easing="ease-in-out-quad"
           >
           <em>{post.frontmatter.title}</em>,&nbsp;
           {post.frontmatter.info}.&nbsp;

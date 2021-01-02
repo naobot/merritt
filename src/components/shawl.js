@@ -1,5 +1,6 @@
 import React from "react"
 import Section from "./section"
+import Work from "./work"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -41,29 +42,8 @@ export default function Shawl({ children }) {
   const post = data.allMarkdownRemark.edges[0].node;
   const image = data.file.childImageSharp;
   return (
-    <Section>
-      <div id="mindset" className="work">
-        <div 
-          className="work-image" 
-          data-sal="fade" 
-          data-sal-delay="100"
-          data-sal-duration="600"
-          data-sal-easing="ease-in-out-quad"
-          >
-          <Img fluid={image.fluid} alt={post.frontmatter.title} />
-        </div>
-        <div 
-          className="work-desc"
-          data-sal="slide-up" 
-          data-sal-delay="100"
-          data-sal-duration="600"
-          data-sal-easing="ease-in-out-quad"
-          >
-          <h6 className="work-title">{post.frontmatter.title}</h6>
-          <p>{post.frontmatter.info}. {post.frontmatter.credit}.</p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
-      </div>
+    <Section id="shawl-work-container">
+      <Work id="shawl" image={image} post={post} />
     </Section>
   )
 }

@@ -2,6 +2,8 @@
 @use '../responsive.scss';
 
 .curatorial-text {
+  width: 100%;
+  justify-content: center;
   h1 {
     font-size: typography.$h1 * 0.5;
     text-align: center;
@@ -12,16 +14,18 @@
   p {
     margin-bottom: 10px;
   }
+  .text-container {
+    width: 800px;
+    margin: 0 auto;
+  }
 }
 
 $columnCount: 2;
-$columnWidth: 360px;
+$columnWidth: 380px;
 $columnGap: 2rem;
+$columnFill: balance;
 
-#exhibition-intro {
-  width: 800px;
-  margin: 30px auto 80px auto;
-  align-self: center;
+#exhibition-intro-i, #exhibition-intro-ii {
   .text-content {
     columns: $columnCount $columnWidth;
     -webkit-columns: $columnCount $columnWidth;
@@ -29,5 +33,15 @@ $columnGap: 2rem;
     column-gap: $columnGap;
     -webkit-column-gap: $columnGap;
     -moz-column-gap: $columnGap;
+    text-align: left;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 100vh;
+    max-height: 800px;
+    padding: 40px 0;
+    font-size: typography.$baseSize * 1.2;
+    -moz-column-fill: $columnFill;
+         column-fill: $columnFill;
   }
 }

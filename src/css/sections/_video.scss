@@ -3,7 +3,7 @@
 
 $videoWidth: 80%;
 
-.work-video {
+.video-container {
   width: $videoWidth;
   .video {
     position: relative;
@@ -21,8 +21,6 @@ $videoWidth: 80%;
   }
 }
 .video-work.work {
-  justify-content: center;
-  flex-direction: column;
   .work-desc {
     width: $videoWidth;
     align-self: center;
@@ -61,7 +59,7 @@ $videoWidth: 80%;
 }
 
 #disappearing {
-  .work-video {
+  .video-container {
     margin: 0 auto;
   }
 }

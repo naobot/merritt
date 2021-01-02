@@ -17,11 +17,19 @@
     margin-bottom: 60px;
     padding: 0 40px;
     min-height: 100vh;
-    /* positional block within section */
-    div > div {
-      position: relative;
-      height: fit-content;
-    }
   }
 }
-
+.work, .curatorial-text {
+  width: 100%;
+  margin: 0 auto;
+}
+.sticky-bounding-box {
+  // background-color: rgba(255,255,255,0.2);
+  height: 300vh;
+}
+.sticky-element {
+  // border: 1px solid rgba(255,180,189,0.8);
+  margin: 0 auto;
+  width: 100%;
+  height: fit-content;
+}

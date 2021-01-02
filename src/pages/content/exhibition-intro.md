@@ -2,8 +2,17 @@
 title: "On this exhibition..."
 ---
 
-This lorem ipsum placeholder text is about 200 words long. Sed blandit eros quis diam porttitor tristique. Nam vel justo lectus. Aenean aliquet id urna in rhoncus. Proin tempor laoreet odio, id consectetur magna convallis ut.
+Merritt Johnson’s artistic practice navigates the spaces between bodies and the body politic,
+land, and culture. Deeply invested in Indigenous self-determination and informed by
+necessity, her works foreground the urgency of socio-political transformation. Love Song, an
+online exhibition and artist’s publication, confronts the violence of cis-hetero patriarchy,
+environmental exploitation, and white supremacy through the articulation of practice and the
+building of armatures that dismantle these logics.
 
-In pellentesque mollis placerat. Sed ut nunc vulputate lacus malesuada placerat a quis odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus congue, purus vel iaculis ultrices, tellus eros viverra mi, sed dignissim sapien nunc sed massa. Nunc eleifend fermentum faucibus. Donec elementum, dui ac elementum pharetra, purus nisi efficitur purus, ac iaculis urna purus non nisi. 
+*Love Song* collects a selection of videos from Johnson’s ongoing Exorcising America series,
+each engaging with an aspect of how the so-called Americas manifest sickness,
+and exert control and violence over land and bodies. Love Song also documents the artist’s
+sculptural practice, specifically as activated through her material interventions into different
+kinds of technological apparatuses, proposing an amalgamation between different ways of
+knowing and being.
 
-Cras fringilla, leo vel consectetur malesuada, sem ipsum molestie est, id iaculis ante libero ac mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean ac dolor at magna iaculis convallis. Nam posuere metus quis dolor condimentum maximus. Aliquam viverra dui urna, ac vulputate felis volutpat eget. Sed turpis sem, auctor a justo vitae, egestas fermentum augue. Duis sollicitudin justo tellus, vel congue turpis convallis at. In interdum augue eu magna auctor pretium. Duis sem ante, bibendum quis erat a, pellentesque auctor massa. Phasellus tellus dui, aliquam sed risus sodales, aliquet ornare nibh. Nullam.

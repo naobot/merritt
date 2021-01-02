@@ -4,7 +4,9 @@
 .landing-title {
   position: relative;
   margin-top: 20px;
-  height: 800px;
+  margin-bottom: 120px;
+  padding: 0 20px;
+  height: 100vh;
   h1 {
     font-size: 6 * typography.$baseSize;
     line-height: 1.2;

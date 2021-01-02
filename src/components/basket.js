@@ -1,5 +1,6 @@
 import React from "react"
 import Section from "./section"
+import Work from "./work"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
@@ -41,25 +42,8 @@ export default function Basket({ children }) {
   const post = data.allMarkdownRemark.edges[0].node;
   const image = data.file.childImageSharp;
   return (
-    <Section>
-      <div id="basket" className="work">
-        <div 
-          className="work-image" 
-          data-sal="fade" 
-          data-sal-delay="100"
-          data-sal-duration="600"
-          data-sal-easing="ease-in-out-quad"
-          >
-          <Img fluid={image.fluid} alt={post.frontmatter.title} />
-          <div
-            className="work-desc"
-            >
-            <em>{post.frontmatter.title}</em>,&nbsp;
-            {post.frontmatter.info}.&nbsp;
-            {post.frontmatter.credit}.
-          </div>
-        </div>
-      </div>
+    <Section id="basket-work-container">
+      <Work id="basket" image={image} post={post} />
     </Section>
   )
 }

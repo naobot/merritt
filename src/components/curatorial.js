@@ -26,14 +26,16 @@ export default function Curatorial({ children }) {
       <Section>
         <div 
           id="exhibition-intro"
-          className="curatorial-text"
-          data-sal="fade" 
-          data-sal-delay="20"
-          data-sal-duration="600"
-          data-sal-easing="ease-in-out-quad"
+          className="curatorial-text element-container"
           >
-          <h1>{post.frontmatter.title}</h1>
-          <div className="text-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div
+            className="text-container"
+            >
+            <div className="text-element">
+              <h1>{post.frontmatter.title}</h1>
+              <div className="text-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+            </div>
+          </div>
         </div>
       </Section>
   )

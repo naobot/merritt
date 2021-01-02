@@ -1,0 +1,31 @@
+import React from "react"
+import Img from "gatsby-image"
+
+export default function Work(props) {
+  return (
+    <div id={props.id} className="work">
+      <div 
+        className="work-image"
+        >
+        <Img fluid={props.image.fluid} alt="Mindset (sweetgrass)" />
+      </div>
+      <div
+        className="work-desc"
+        style={{ opacity: 0 }}
+        >
+        <h3 className="work-title">{props.post.frontmatter.title}</h3>
+        <div 
+          className="full-desc"
+          dangerouslySetInnerHTML={{ __html: props.post.html }}
+          />
+        <div
+          className="work-info"
+          >
+          <em>{props.post.frontmatter.title}</em>,&nbsp;
+          {props.post.frontmatter.info},&nbsp;
+          {props.post.frontmatter.credit}.
+        </div>
+      </div>
+    </div>
+  )
+}
