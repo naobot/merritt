@@ -1,10 +1,12 @@
 @use '../typography.scss';
 @use '../responsive.scss';
 
-$videoWidth: 80%;
+$videoWidth: 90%;
 
 .video-container {
   width: $videoWidth;
+  max-width: 1200px;
+  margin: 0 auto;
   .video {
     position: relative;
     padding-top: 30px;
@@ -20,46 +22,78 @@ $videoWidth: 80%;
     }
   }
 }
-.video-work.work {
-  .work-desc {
-    width: $videoWidth;
-    align-self: center;
+.video-desc {
+  max-width: 400px;
+  margin: 0 auto;
+  min-height: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-size: typography.$h5;
+    margin-bottom: 120px;
+    text-align: center;
+    line-height: 0.95;
+  }
+  .full-desc {
+    font-size: typography.$baseSize * 0.8;
+    text-align: justify;
     text-align-last: center;
-    height: 100vh;
-    padding-left: 0 !important;
-    display: flex;
-    justify-content: center;
-    .vertical-align {
-      align-self: center;
-      width: 480px;
-      h3 {
-        font-size: typography.$h4;
-        line-height: 0.98;
-        margin-bottom: 80px;
-      }
-      p {
-        text-align: justify;
-        text-align-last: center;
-      }
-      .work-info {
-        margin-top: 80px;
-      }
-    }
+    margin-bottom: 60px;
   }
-  @include responsive.responsive(responsive.$big-break) {
-    .work-desc {
-      width: 400px;
-    }
-  }
-  @include responsive.responsive(responsive.$small-break) {
-    .work-desc {
-      width: 360px;
+  .video-info {
+    z-index: 6;
+    margin-top: 40px;
+    text-align: justify;
+    text-align-last: center;
+    font-size: typography.$baseSize * 0.6;
+    p {
+      font-size: 0.8rem;
     }
   }
 }
 
-#disappearing {
-  .video-container {
-    margin: 0 auto;
-  }
-}
+// .video-work.work {
+//   .work-desc {
+//     width: $videoWidth;
+//     align-self: center;
+//     text-align-last: center;
+//     height: 100vh;
+//     padding-left: 0 !important;
+//     display: flex;
+//     justify-content: center;
+//     .vertical-align {
+//       align-self: center;
+//       width: 480px;
+//       h3 {
+//         font-size: typography.$h4;
+//         line-height: 0.98;
+//         margin-bottom: 80px;
+//       }
+//       p {
+//         text-align: justify;
+//         text-align-last: center;
+//       }
+//       .work-info {
+//         margin-top: 80px;
+//       }
+//     }
+//   }
+//   @include responsive.responsive(responsive.$big-break) {
+//     .work-desc {
+//       width: 400px;
+//     }
+//   }
+//   @include responsive.responsive(responsive.$small-break) {
+//     .work-desc {
+//       width: 360px;
+//     }
+//   }
+// }
+
+// #disappearing {
+//   .video-container {
+//     margin: 0 auto;
+//   }
+// }

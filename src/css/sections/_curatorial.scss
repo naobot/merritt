@@ -1,47 +1,14 @@
 @use '../typography.scss';
 @use '../responsive.scss';
 
-.curatorial-text {
+.text-container {
   width: 100%;
+  min-height: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  h1 {
-    font-size: typography.$h1 * 0.5;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  font-size: typography.$baseSize * 0.9;
-  text-align: justify;
-  p {
-    margin-bottom: 10px;
-  }
-  .text-container {
-    width: 800px;
-    margin: 0 auto;
-  }
-}
-
-$columnCount: 2;
-$columnWidth: 380px;
-$columnGap: 2rem;
-$columnFill: balance;
-
-#exhibition-intro-i, #exhibition-intro-ii {
   .text-content {
-    columns: $columnCount $columnWidth;
-    -webkit-columns: $columnCount $columnWidth;
-    -moz-columns: $columnCount $columnWidth;
-    column-gap: $columnGap;
-    -webkit-column-gap: $columnGap;
-    -moz-column-gap: $columnGap;
-    text-align: left;
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-    height: 100vh;
-    max-height: 800px;
-    padding: 40px 0;
-    font-size: typography.$baseSize * 1.2;
-    -moz-column-fill: $columnFill;
-         column-fill: $columnFill;
+    width: 80%;
   }
 }

@@ -7,26 +7,34 @@
   margin-bottom: 120px;
   padding: 0 20px;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   h1 {
     font-size: 6 * typography.$baseSize;
     line-height: 1.2;
     margin-bottom: 1rem;
     letter-spacing: -0.3rem;
+    text-align: center;
+    .subtitle {
+      letter-spacing: 0.3rem;
+    }
   }
   h3 {
     div {
       display: inline-block;
     }
-    font-size: 4 * typography.$baseSize;
+    font-size: typography.$baseSize * 1.4;
     line-height: 1.3;
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.01rem;
+    text-align: center;
   }
   @include responsive.responsive(responsive.$big-break) {
     h1 {
       font-size: 6 * typography.$baseSize * 0.8;
     }
     h3 {
-      font-size: 4 * typography.$baseSize * 0.8;
+      font-size: typography.$baseSize * 1.4;
     }
   }
   @include responsive.responsive(responsive.$small-break) {
@@ -34,7 +42,7 @@
       font-size: 6 * typography.$baseSize * 0.6;
     }
     h3 {
-      font-size: 4 * typography.$baseSize * 0.6;
+      font-size: typography.$baseSize * 1.4;
     }
   }
 }

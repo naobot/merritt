@@ -1,7 +1,6 @@
 import React from "react"
-import Section from "./section"
 import { useStaticQuery, graphql } from "gatsby"
-import Video from "./video"
+import VideoWork from "./videowork"
 
 export default function Disappearing() {
   const data = useStaticQuery(
@@ -27,38 +26,6 @@ export default function Disappearing() {
   );
   const post = data.allMarkdownRemark.edges[0].node;
   return (
-    <Section>
-      <div id="disappearing" className="work video-work">
-        <div className="element-container video-element">
-          <div className="sticky-element">
-            <div 
-              className="video-container" 
-              >
-              <Video 
-                videoSrcURL={post.frontmatter.videoUrl}
-                videoTitle={post.frontmatter.title}
-              />
-            </div>
-          </div>
-        </div>
-        <div className="element-container description-element">
-          <div className="sticky-element work-element">
-            <div 
-              className="work-desc"
-              >
-              <div className="vertical-align">
-                <h3>{post.frontmatter.title}</h3>
-                <p>Work description here. Aliquam eget laoreet tortor. Aliquam vestibulum quam eget tortor vehicula, sit amet luctus massa lacinia. Quisque iaculis maximus tortor vel venenatis. Praesent efficitur mattis tincidunt. Vivamus convallis leo erat, et sagittis ligula sagittis quis. Aliquam erat volutpat. Aenean ut orci bibendum, cursus erat in, mollis nisl. Donec non mauris nulla. In volutpat diam lacinia tellus rutrum fermentum. Maecenas pretium libero eu urna elementum, sit amet cursus massa vestibulum. Phasellus tortor elit, facilisis ac vulputate non, efficitur eu dolor.</p>
-                <div className="work-info">
-                  <em>{post.frontmatter.title}</em>,&nbsp;
-                  {post.frontmatter.info}.&nbsp;
-                  {post.frontmatter.credit}.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Section>
+    <VideoWork id="disappearing" post={post} />
   )
 }

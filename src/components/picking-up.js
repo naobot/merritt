@@ -1,9 +1,8 @@
 import React from "react"
-import Section from "./section"
 import { useStaticQuery, graphql } from "gatsby"
-import Video from "./video"
+import VideoWork from "./videowork"
 
-export default function PickingUp() {
+export default function Disappearing() {
   const data = useStaticQuery(
     graphql`
       query {
@@ -27,24 +26,6 @@ export default function PickingUp() {
   );
   const post = data.allMarkdownRemark.edges[0].node;
   return (
-    <Section>
-      <div id="picking-up" className="work video-work">
-        <div 
-          className="work-video" 
-          >
-          <Video 
-            videoSrcURL={post.frontmatter.videoUrl}
-            videoTitle={post.frontmatter.title}
-          />
-        </div>
-        <div 
-          className="work-desc"
-          >
-          <em>{post.frontmatter.title}</em>,&nbsp;
-          {post.frontmatter.info}.&nbsp;
-          {post.frontmatter.credit}.
-        </div>
-      </div>
-    </Section>
+    <VideoWork id="picking" post={post} />
   )
 }

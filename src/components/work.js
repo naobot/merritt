@@ -7,7 +7,7 @@ export default function Work(props) {
       <div 
         className="work-image"
         >
-        <Img fluid={props.image.fluid} alt="Mindset (sweetgrass)" />
+        <Img fluid={props.image.fluid} alt={props.post.frontmatter.title} />
       </div>
       <div
         className="work-desc"
