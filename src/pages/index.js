@@ -660,6 +660,26 @@ export default function Home() {
         }
       );
     }, []);
+    // fade in Disappearing video
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#disappearing-work-container .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#disappearing-work-container.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
   /* end DISAPPEARING EFFECTS */
 
   /* FALL EFFECTS */
@@ -677,6 +697,26 @@ export default function Home() {
             end: "bottom bottom",
             pin: element.querySelector("#fall-work-container .sticky-element"),
           }
+        }
+      );
+    }, []);
+    // fade in Fall video
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#fall-work-container .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#fall-work-container.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+          },
+          opacity: 1,
+          ease: "power3.inOut",
         }
       );
     }, []);
@@ -700,6 +740,26 @@ export default function Home() {
         }
       );
     }, []);
+    // fade in Conditioning video
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#conditioning-work-container .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#conditioning-work-container.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
   /* end CONDITIONING EFFECTS */
 
   /* PICKING UP EFFECTS */
@@ -720,6 +780,26 @@ export default function Home() {
         }
       );
     }, []);
+    // fade in Picking Up video
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#picking-work-container .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#picking-work-container.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
   /* end PICKING UP EFFECTS */
 
   /* VISIBILITY EFFECTS */
@@ -737,6 +817,26 @@ export default function Home() {
             end: "bottom bottom",
             pin: element.querySelector("#visibility-work-container .sticky-element"),
           }
+        }
+      );
+    }, []);
+    // fade in Visibility video
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#visibility-work-container .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#visibility-work-container.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+          },
+          opacity: 1,
+          ease: "power3.inOut",
         }
       );
     }, []);
