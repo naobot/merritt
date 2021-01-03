@@ -14,6 +14,8 @@ import LoveSong from "../components/lovesong"
 import PickingUp from "../components/picking-up"
 import Visibility from "../components/visibility"
 import Shawl from "../components/shawl"
+import Biography from "../components/biography"
+import Credits from "../components/credits"
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -440,6 +442,7 @@ export default function Home() {
             scrub: true,
             start: "+=100",
             end: "+=800",
+            invalidateOnRefresh: true,
           },
           scale: 1,
           x: 0,
@@ -462,6 +465,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
+            invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -505,6 +509,7 @@ export default function Home() {
             scrub: true,
             start: "+=100",
             end: "+=800",
+            invalidateOnRefresh: true,
           },
           scale: 1,
           x: 0,
@@ -527,6 +532,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
+            invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -570,6 +576,7 @@ export default function Home() {
             scrub: true,
             start: "+=100",
             end: "+=800",
+            invalidateOnRefresh: true,
           },
           scale: 1,
           x: 0,
@@ -592,6 +599,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
+            invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -635,6 +643,7 @@ export default function Home() {
             scrub: true,
             start: "+=100",
             end: "+=800",
+            invalidateOnRefresh: true,
           },
           scale: 1,
           x: 0,
@@ -657,6 +666,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
+            invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -875,18 +885,6 @@ export default function Home() {
     }, []);
   /* end VISIBILITY EFFECTS */
 
-  // const content = <>   
-  //     <Curatorial />
-  //     <Disappearing />
-  //     <Fall />   
-  //     <Curatorial />
-  //     <Basket />
-  //     <Conditioning />
-  //     <Curatorial />
-  //     <LoveSong />
-  //     <PickingUp />
-  //     <Visibility />
-  //     <Shawl /></>;
   return (
     <div className="main-container" ref={ref}>
 
@@ -917,5 +915,8 @@ export default function Home() {
       <DescriptiveSecond />
 
       <Shawl />
+
+      <Biography />
+      <Credits />
     </div>
 )}
