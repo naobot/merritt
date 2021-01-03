@@ -23,28 +23,21 @@ $videoWidth: 90%;
   }
 }
 .video-desc {
-  max-width: 400px;
+  max-width: 360px;
   margin: 0 auto;
-  min-height: 400px;
-  height: 100vh;
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   h1 {
-    font-size: typography.$h5;
-    margin-bottom: 120px;
-    text-align: center;
-    line-height: 0.95;
-  }
-  .full-desc {
-    font-size: typography.$baseSize * 0.8;
+    font-size: typography.$h6 * 0.6;
     text-align: justify;
-    text-align-last: center;
-    margin-bottom: 60px;
+    text-align-last: justify;
+    line-height: 0.95;
   }
   .video-info {
     z-index: 6;
-    margin-top: 40px;
+    margin-top: 5px;
     text-align: justify;
     text-align-last: center;
     font-size: typography.$baseSize * 0.6;
@@ -53,47 +46,3 @@ $videoWidth: 90%;
     }
   }
 }
-
-// .video-work.work {
-//   .work-desc {
-//     width: $videoWidth;
-//     align-self: center;
-//     text-align-last: center;
-//     height: 100vh;
-//     padding-left: 0 !important;
-//     display: flex;
-//     justify-content: center;
-//     .vertical-align {
-//       align-self: center;
-//       width: 480px;
-//       h3 {
-//         font-size: typography.$h4;
-//         line-height: 0.98;
-//         margin-bottom: 80px;
-//       }
-//       p {
-//         text-align: justify;
-//         text-align-last: center;
-//       }
-//       .work-info {
-//         margin-top: 80px;
-//       }
-//     }
-//   }
-//   @include responsive.responsive(responsive.$big-break) {
-//     .work-desc {
-//       width: 400px;
-//     }
-//   }
-//   @include responsive.responsive(responsive.$small-break) {
-//     .work-desc {
-//       width: 360px;
-//     }
-//   }
-// }
-
-// #disappearing {
-//   .video-container {
-//     margin: 0 auto;
-//   }
-// }

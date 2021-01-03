@@ -13,7 +13,7 @@ export default function Work(props) {
         className="work-desc"
         style={{ opacity: 0 }}
         >
-        <h3 className="work-title">{props.post.frontmatter.title}</h3>
+        <h3 className="work-title" dangerouslySetInnerHTML={{ __html: props.post.frontmatter.title }} />
         <div 
           className="full-desc"
           dangerouslySetInnerHTML={{ __html: props.post.html }}
@@ -21,7 +21,7 @@ export default function Work(props) {
         <div
           className="work-info"
           >
-          <em>{props.post.frontmatter.title}</em>,&nbsp;
+          <em>{props.post.frontmatter.title.replace(/(<([^>]+)>)/gi, "")}</em>,&nbsp;
           {props.post.frontmatter.info},&nbsp;
           {props.post.frontmatter.credit}.
         </div>

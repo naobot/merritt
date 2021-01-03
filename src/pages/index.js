@@ -5,6 +5,9 @@ import Mindset from "../components/mindset"
 import Introduction from "../components/introduction"
 import Disappearing from "../components/disappearing"
 import Fall from "../components/fall"
+import DescriptiveZero from "../components/descriptivezero"
+import DescriptiveFirst from "../components/descriptivefirst"
+import DescriptiveSecond from "../components/descriptivesecond"
 import Basket from "../components/basket"
 import Conditioning from "../components/conditioning"
 import LoveSong from "../components/lovesong"
@@ -114,6 +117,274 @@ export default function Home() {
       );
     }, []);
   /* end CURATORIAL TEXT EFFECTS */
+
+  /* DESCRIPTIVE 0 TEXT EFFECTS */
+    // make Descriptive 0-1 description sticky
+    useEffect(() => {
+      const element = ref.current;
+      gsap.to(
+        element.querySelector("#desc-0-1.sticky-bounding-box"),
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-0-1 .sticky-element"),
+            scrub: true,
+            start: "center center",
+            endTrigger: element.querySelector("#desc-0-1.sticky-bounding-box"),
+            end: "bottom bottom",
+            pin: element.querySelector("#desc-0-1 .sticky-element"),
+          }
+        }
+      );
+    }, []);
+    // fade in Descriptive 0-1 description
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#desc-0-1 .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-0-1.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
+    // make Descriptive 0-2 description sticky
+    useEffect(() => {
+      const element = ref.current;
+      gsap.to(
+        element.querySelector("#desc-0-2.sticky-bounding-box"),
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-0-2 .sticky-element"),
+            scrub: true,
+            start: "center center",
+            endTrigger: element.querySelector("#desc-0-2.sticky-bounding-box"),
+            end: "bottom bottom",
+            pin: element.querySelector("#desc-0-2 .sticky-element"),
+          }
+        }
+      );
+    }, []);
+    // fade in Descriptive 0-2 description
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#desc-0-2 .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-0-2.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
+  /* end DESCRIPTIVE 0 TEXT EFFECTS */
+
+  /* DESCRIPTIVE 1 TEXT EFFECTS */
+    // make Descriptive 1-1 description sticky
+    useEffect(() => {
+      const element = ref.current;
+      gsap.to(
+        element.querySelector("#desc-1-1.sticky-bounding-box"),
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-1-1 .sticky-element"),
+            scrub: true,
+            start: "center center",
+            endTrigger: element.querySelector("#desc-1-1.sticky-bounding-box"),
+            end: "bottom bottom",
+            pin: element.querySelector("#desc-1-1 .sticky-element"),
+          }
+        }
+      );
+    }, []);
+    // fade in Descriptive 1-1 description
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#desc-1-1 .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-1-1.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
+    // make Descriptive 1-2 description sticky
+    useEffect(() => {
+      const element = ref.current;
+      gsap.to(
+        element.querySelector("#desc-1-2.sticky-bounding-box"),
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-1-2 .sticky-element"),
+            scrub: true,
+            start: "center center",
+            endTrigger: element.querySelector("#desc-1-2.sticky-bounding-box"),
+            end: "bottom bottom",
+            pin: element.querySelector("#desc-1-2 .sticky-element"),
+          }
+        }
+      );
+    }, []);
+    // fade in Descriptive 1-2 description
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#desc-1-2 .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-1-2.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
+  /* end DESCRIPTIVE 1 TEXT EFFECTS */
+
+  /* DESCRIPTIVE 2 TEXT EFFECTS */
+    // make Descriptive 2-1 description sticky
+    useEffect(() => {
+      const element = ref.current;
+      gsap.to(
+        element.querySelector("#desc-2-1.sticky-bounding-box"),
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-2-1 .sticky-element"),
+            scrub: true,
+            start: "center center",
+            endTrigger: element.querySelector("#desc-2-1.sticky-bounding-box"),
+            end: "bottom bottom",
+            pin: element.querySelector("#desc-2-1 .sticky-element"),
+          }
+        }
+      );
+    }, []);
+    // fade in Descriptive 2-1 description
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#desc-2-1 .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-2-1.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
+    // make Descriptive 2-2 description sticky
+    useEffect(() => {
+      const element = ref.current;
+      gsap.to(
+        element.querySelector("#desc-2-2.sticky-bounding-box"),
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-2-2 .sticky-element"),
+            scrub: true,
+            start: "center center",
+            endTrigger: element.querySelector("#desc-2-2.sticky-bounding-box"),
+            end: "bottom bottom",
+            pin: element.querySelector("#desc-2-2 .sticky-element"),
+          }
+        }
+      );
+    }, []);
+    // fade in Descriptive 2-2 description
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#desc-2-2 .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-2-2.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
+    // make Descriptive 2-3 description sticky
+    useEffect(() => {
+      const element = ref.current;
+      gsap.to(
+        element.querySelector("#desc-2-3.sticky-bounding-box"),
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-2-3 .sticky-element"),
+            scrub: true,
+            start: "center center",
+            endTrigger: element.querySelector("#desc-2-3.sticky-bounding-box"),
+            end: "bottom bottom",
+            pin: element.querySelector("#desc-2-3 .sticky-element"),
+          }
+        }
+      );
+    }, []);
+    // fade in Descriptive 2-3 description
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#desc-2-3 .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#desc-2-3.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
+  /* end DESCRIPTIVE 2 TEXT EFFECTS */
 
   /* MINDSET EFFECTS */
     // make Mindset sticky
@@ -389,43 +660,6 @@ export default function Home() {
         }
       );
     }, []);
-    // make Disappearing description sticky
-    useEffect(() => {
-      const element = ref.current;
-      gsap.to(
-        element.querySelector("#disappearing-desc-container.sticky-bounding-box"),
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#disappearing-desc-container .sticky-element"),
-            scrub: true,
-            start: "center center",
-            endTrigger: element.querySelector("#disappearing-desc-container.sticky-bounding-box"),
-            end: "bottom bottom",
-            pin: element.querySelector("#disappearing-desc-container .sticky-element"),
-          }
-        }
-      );
-    }, []);
-    // fade in Disappearing description
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#disappearing-desc-container .sticky-element"),
-        {
-          opacity: 0
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#disappearing-desc-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
-            end: "+=800",
-          },
-          opacity: 1,
-          ease: "power3.inOut",
-        }
-      );
-    }, []);
   /* end DISAPPEARING EFFECTS */
 
   /* FALL EFFECTS */
@@ -443,43 +677,6 @@ export default function Home() {
             end: "bottom bottom",
             pin: element.querySelector("#fall-work-container .sticky-element"),
           }
-        }
-      );
-    }, []);
-    // make Fall description sticky
-    useEffect(() => {
-      const element = ref.current;
-      gsap.to(
-        element.querySelector("#fall-desc-container.sticky-bounding-box"),
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#fall-desc-container .sticky-element"),
-            scrub: true,
-            start: "center center",
-            endTrigger: element.querySelector("#fall-desc-container.sticky-bounding-box"),
-            end: "bottom bottom",
-            pin: element.querySelector("#fall-desc-container .sticky-element"),
-          }
-        }
-      );
-    }, []);
-    // fade in Fall description
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#fall-desc-container .sticky-element"),
-        {
-          opacity: 0
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#fall-desc-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
-            end: "+=800",
-          },
-          opacity: 1,
-          ease: "power3.inOut",
         }
       );
     }, []);
@@ -503,43 +700,6 @@ export default function Home() {
         }
       );
     }, []);
-    // make Conditioning description sticky
-    useEffect(() => {
-      const element = ref.current;
-      gsap.to(
-        element.querySelector("#conditioning-desc-container.sticky-bounding-box"),
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#conditioning-desc-container .sticky-element"),
-            scrub: true,
-            start: "center center",
-            endTrigger: element.querySelector("#conditioning-desc-container.sticky-bounding-box"),
-            end: "bottom bottom",
-            pin: element.querySelector("#conditioning-desc-container .sticky-element"),
-          }
-        }
-      );
-    }, []);
-    // fade in Conditioning description
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#conditioning-desc-container .sticky-element"),
-        {
-          opacity: 0
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#conditioning-desc-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
-            end: "+=800",
-          },
-          opacity: 1,
-          ease: "power3.inOut",
-        }
-      );
-    }, []);
   /* end CONDITIONING EFFECTS */
 
   /* PICKING UP EFFECTS */
@@ -560,43 +720,6 @@ export default function Home() {
         }
       );
     }, []);
-    // make Picking Up description sticky
-    useEffect(() => {
-      const element = ref.current;
-      gsap.to(
-        element.querySelector("#picking-desc-container.sticky-bounding-box"),
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#picking-desc-container .sticky-element"),
-            scrub: true,
-            start: "center center",
-            endTrigger: element.querySelector("#picking-desc-container.sticky-bounding-box"),
-            end: "bottom bottom",
-            pin: element.querySelector("#picking-desc-container .sticky-element"),
-          }
-        }
-      );
-    }, []);
-    // fade in Picking Up description
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#picking-desc-container .sticky-element"),
-        {
-          opacity: 0
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#picking-desc-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
-            end: "+=800",
-          },
-          opacity: 1,
-          ease: "power3.inOut",
-        }
-      );
-    }, []);
   /* end PICKING UP EFFECTS */
 
   /* VISIBILITY EFFECTS */
@@ -614,43 +737,6 @@ export default function Home() {
             end: "bottom bottom",
             pin: element.querySelector("#visibility-work-container .sticky-element"),
           }
-        }
-      );
-    }, []);
-    // make visibility Up description sticky
-    useEffect(() => {
-      const element = ref.current;
-      gsap.to(
-        element.querySelector("#visibility-desc-container.sticky-bounding-box"),
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#visibility-desc-container .sticky-element"),
-            scrub: true,
-            start: "center center",
-            endTrigger: element.querySelector("#visibility-desc-container.sticky-bounding-box"),
-            end: "bottom bottom",
-            pin: element.querySelector("#visibility-desc-container .sticky-element"),
-          }
-        }
-      );
-    }, []);
-    // fade in visibility Up description
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#visibility-desc-container .sticky-element"),
-        {
-          opacity: 0
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#visibility-desc-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
-            end: "+=800",
-          },
-          opacity: 1,
-          ease: "power3.inOut",
         }
       );
     }, []);
@@ -681,15 +767,21 @@ export default function Home() {
 
       <Fall />
 
+      <DescriptiveZero />
+
       <Basket />
 
       <Conditioning />
+
+      <DescriptiveFirst />
 
       <LoveSong />
 
       <PickingUp />
 
       <Visibility />
+
+      <DescriptiveSecond />
 
       <Shawl />
     </div>
