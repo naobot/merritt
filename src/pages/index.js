@@ -407,6 +407,48 @@ export default function Home() {
     }, []);
   /* end DESCRIPTIVE 2 TEXT EFFECTS */
 
+  /* BIO TEXT EFFECTS */
+    // make Descriptive 2-1 description sticky
+    useEffect(() => {
+      const element = ref.current;
+      gsap.to(
+        element.querySelector("#bio.sticky-bounding-box"),
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#bio .sticky-element"),
+            scrub: true,
+            start: "center center",
+            endTrigger: element.querySelector("#bio.sticky-bounding-box"),
+            end: "bottom bottom",
+            invalidateOnRefresh: true,
+            pin: element.querySelector("#bio .sticky-element"),
+          }
+        }
+      );
+    }, []);
+    // fade in Descriptive 2-1 description
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#bio .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#bio.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=800",
+            invalidateOnRefresh: true,
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
+  /* end BIO TEXT EFFECTS */
+
   /* MINDSET EFFECTS */
     // make Mindset sticky
     useEffect(() => {

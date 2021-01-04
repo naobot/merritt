@@ -16,3 +16,19 @@
     }
   }
 }
+#credits {
+  font-size: typography.$baseSize * 0.88;
+  margin-top: 120px;
+  .text-container {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .text-content {
+    max-width: 800px;
+    align-self: flex-end;
+  }
+  .logo {
+    width: 25%;
+    padding: 20px;
+  }
+}

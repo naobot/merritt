@@ -33,3 +33,10 @@
   width: 100%;
   height: fit-content;
 }
+
+a:link, a:active, a:visited, a:hover {
+  color: typography.$baseColor;
+}
+a:hover {
+  cursor: pointer;
+}
