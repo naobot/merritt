@@ -482,7 +482,7 @@ export default function Home() {
           scrollTrigger: {
             trigger: element.querySelector("#mindset.work"),
             scrub: true,
-            start: "+=100",
+            start: "top top",
             end: "+=800",
             invalidateOnRefresh: true,
           },
@@ -542,7 +542,7 @@ export default function Home() {
         element.querySelector("#basket .work-image"),
         {
           scale: 0.5,
-          x: 240,
+          x: 100,
           y: 5
         },
         {
@@ -609,7 +609,7 @@ export default function Home() {
         element.querySelector("#lovesong .work-image"),
         {
           scale: 0.5,
-          x: 190,
+          x: 90,
           y: 205
         },
         {

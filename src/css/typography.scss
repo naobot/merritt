@@ -1,3 +1,5 @@
+@use './responsive.scss';
+
 @font-face {
   font-family: 'Happy Times at the IKOB';
   src: url('../fonts/happy-times-NG_regular_master_web.woff') format('woff'),
@@ -27,6 +29,12 @@ $h3: 3 * $baseSize;
 $h4: 2.5 * $baseSize;
 $h5: 2 * $baseSize;
 $h6: 1.5 * $baseSize;
+
+@include responsive.responsive(responsive.$small-break) {
+  p {
+    font-size: $baseSize * 0.7;
+  }
+}
 
 html, body {
   font-family: 'Happy Times at the IKOB', Times New Roman, serif;

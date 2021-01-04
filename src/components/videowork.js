@@ -4,7 +4,6 @@ import Video from "./video"
 
 export default function VideoWork(props) {
   const videoContainerId = props.id + "-work-container";
-  const descContainerId = props.id + "-desc-container";
   return (
     <Section id={videoContainerId}>
       <Video 
