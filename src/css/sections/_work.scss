@@ -1,30 +1,11 @@
 @use '../typography.scss';
 @use '../responsive.scss';
 
-#mindset.work {
-  @include responsive.responsive(responsive.$big-break) {
-    .work-desc {
-      width: 400px;
-    }
-  }
-  @include responsive.responsive(responsive.$small-break) {
-    .work-desc {
-      width: 360px;
-    }
-  }
-}
-
-#basket.work {
-  @include responsive.responsive(responsive.$big-break) {
-    .work-desc {
-      width: 400px;
-    }
-  }
-  @include responsive.responsive(responsive.$small-break) {
-    .work-desc {
-      width: 360px;
-    }
-  }
+#mindset-work-container .sticky-element, 
+#basket-work-container .sticky-element, 
+#lovesong-work-container .sticky-element, 
+#shawl-work-container .sticky-element {
+  opacity: 1 !important;
 }
 
 .work {
@@ -92,17 +73,30 @@ $columnGap: 1rem;
 }
 @include responsive.responsive(responsive.$big-break) {
   .work {
-    justify-content: flex-start;
+    padding-top: 100px;
+  }
+  .work-image {
+    width: 280px !important;
+    margin: 0 auto;
   }
   .work-title {
-    font-size: typography.$h6 * 0.8;
-    margin-top: 10px;
+    font-size: typography.$h6 * 0.7 !important;
+    margin-top: 0;
+    margin-bottom: 20px !important;
   }
   .work-desc {
+    margin: 20px auto 0 auto;
+    padding: 10px;
     p {
-      font-size: typography.$baseSize * 0.6;
-      margin-bottom: 0.6rem;
+      font-size: typography.$baseSize * 0.7 !important;
+      margin-bottom: 0.55rem;
     }
+  }
+  .full-desc {
+    margin-bottom: 0 !important;
+  }
+  .work-info {
+    margin-top: 20px !important;
   }
 }
 @include responsive.responsive(responsive.$small-break) {

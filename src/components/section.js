@@ -6,7 +6,7 @@ export default function Section(props) {
       className="section sticky-bounding-box" 
       id={props.id}
       >
-      <div className="sticky-element">
+      <div className="sticky-element" style={{ opacity: 0 }}>
         {props.children}
       </div>
     </div>

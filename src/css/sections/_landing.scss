@@ -31,7 +31,7 @@
   }
   @include responsive.responsive(responsive.$big-break) {
     h1 {
-      font-size: 6 * typography.$baseSize * 0.8;
+      font-size: 6 * typography.$baseSize * 0.6;
     }
     h3 {
       font-size: typography.$baseSize * 1.4;
@@ -39,7 +39,7 @@
   }
   @include responsive.responsive(responsive.$small-break) {
     h1 {
-      font-size: 6 * typography.$baseSize * 0.6;
+      font-size: 6 * typography.$baseSize * 0.4;
     }
     h3 {
       font-size: typography.$baseSize * 1.4;

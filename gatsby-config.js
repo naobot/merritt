@@ -11,6 +11,7 @@ module.exports = {
     subtitle: 'Love Song',
   },
   plugins: [
+    `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-image`,

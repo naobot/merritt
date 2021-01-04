@@ -29,7 +29,7 @@ export default function DescriptiveSecond({ children }) {
         <div className="text-content">
           <p><em>Love Song (translation basket)</em>, the title work of this exhibition, is a tool for translating medicalized measurements of life and health into a love song. In linking the stethoscope with acts of translation, Johnson foregrounds the reparative potential of active listening:</p>
 
-          <p><blockquote>“Stethoscopes are used by emergency medical workers in hospitals and at sites of state and police violence on Black and brown bodies. They are a listening tool for assessing and saving lives. The translation basket is a reminder that every heartbeat is a precarious love song with an inevitable end. Failure to recognize, value, honour, and protect these songs and the bodies who sing them has been instrumental in building violent, white supremacist, and anthropocentric cultures, governments, and individuals. The translation basket is a container to remedy these disconnections.”</blockquote></p>
+          <blockquote>“Stethoscopes are used by emergency medical workers in hospitals and at sites of state and police violence on Black and brown bodies. They are a listening tool for assessing and saving lives. The translation basket is a reminder that every heartbeat is a precarious love song with an inevitable end. Failure to recognize, value, honour, and protect these songs and the bodies who sing them has been instrumental in building violent, white supremacist, and anthropocentric cultures, governments, and individuals. The translation basket is a container to remedy these disconnections.”</blockquote>
         </div>
       </div>
     </Section>
@@ -44,7 +44,7 @@ export default function DescriptiveSecond({ children }) {
       <div className="text-container">
         <div className="text-content">
           <p>Embedded within the yearning of any love song is a shadow acknowledgement of the end of all things. The song ends, as do the lives of the singer and the subject, as will systems of dispossession, violence and oppression. Merritt’s Johnson’s <em>Love Song</em> celebrates resilience, connection, and belief in the possibility of alternatives for the present and future.</p> 
-          <p>Below, with <em>Fancy Shawl for the frontlines</em>, Johnson celebrates this labour, creating a kind of armour for those people — Indigenous women in particular — who are showing up and doing the work of protecting the land and remaking the world in a good way.</p>
+          <p>Below, with <em>Fancy Shawl for the frontlines</em>, Johnson celebrates this labour, creating a kind of armour for those people&mdash;Indigenous women in particular&mdash;who are showing up and doing the work of protecting the land and remaking the world in a good way.</p>
         </div>
       </div>
     </Section>

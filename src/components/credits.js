@@ -1,6 +1,8 @@
 import React from "react"
 import Section from "./section"
 import { useStaticQuery, graphql } from "gatsby"
+import scrollTo from 'gatsby-plugin-smoothscroll';
+
 import SFUGLogo from "../../static/SFUGalleries.Logo.Black.svg"
 import CCLogo from "../../static/CanadaCouncilLogo_e_l.svg"
 import BCACLogo from "../../static/BCArtsCouncil.svg"
@@ -29,7 +31,7 @@ export default function Credits({ children }) {
     <div id="credits" className="section">
       <div className="text-container">
         <div className="text-content">
-          <p>As part of this exhibition, the artist’s publication <em>Exorcising America: Conditioning Exercises</em> is published by SFU Galleries in an edition of 500. To receive a copy, please email <a href="mailto:sfugallery@sfu.ca">sfugallery@sfu.ca</a> with your mailing address.</p>
+          <p>As part of this exhibition, the artist’s publication <a onClick={() => scrollTo("#intro-1")} className="dotted-line"><em>Exorcising America: Conditioning Exercises</em></a> is published by SFU Galleries in an edition of 500. To receive a copy, please email <a href="mailto:sfugallery@sfu.ca">sfugallery@sfu.ca</a> with your mailing address.</p>
           <p className="credit-lines">
             <span className="small-caps">Publication design:</span> Vicky Lum <br/>
             <span className="small-caps">Publication illustrations:</span> Francisco-Fernando Granados<br/>

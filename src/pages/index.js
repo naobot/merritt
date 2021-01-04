@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useState, useEffect } from "react"
 
 import Landing from "../components/landing"
 import Mindset from "../components/mindset"
@@ -20,7 +20,36 @@ import Credits from "../components/credits"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
+function debounce(fn, ms) {
+  let timer
+  return _ => {
+    clearTimeout(timer)
+    timer = setTimeout(_ => {
+      timer = null
+      fn.apply(this, arguments)
+    }, ms)
+  };
+}
+
 export default function Home() {
+  useEffect(() => {
+    if (typeof window !== `undefined`) {
+      const debouncedHandleResize = debounce(function handleResize() {
+        // setDimensions({
+        //   height: window.innerHeight,
+        //   width: window.innerWidth
+        // });
+        window.location.reload(false);
+      }, 500);
+
+      window.addEventListener('resize', debouncedHandleResize);
+
+      return _ => {
+        window.removeEventListener('resize', debouncedHandleResize);
+      }
+    }
+  }, []);
+
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
   useEffect(() => {
@@ -56,7 +85,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#intro-1.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#intro-1 .sticky-element"),
           }
         }
@@ -73,10 +102,10 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#intro-1.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "0",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
 
           },
           opacity: 1,
@@ -96,7 +125,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#intro-2.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#intro-2 .sticky-element"),
           }
         }
@@ -116,7 +145,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -138,7 +167,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#desc-0-1.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#desc-0-1 .sticky-element"),
           }
         }
@@ -158,7 +187,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -177,7 +206,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#desc-0-2.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#desc-0-2 .sticky-element"),
           }
         }
@@ -197,7 +226,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -219,7 +248,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#desc-1-1.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#desc-1-1 .sticky-element"),
           }
         }
@@ -239,7 +268,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -258,7 +287,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#desc-1-2.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#desc-1-2 .sticky-element"),
           }
         }
@@ -278,7 +307,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -300,7 +329,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#desc-2-1.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#desc-2-1 .sticky-element"),
           }
         }
@@ -320,7 +349,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -339,7 +368,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#desc-2-2.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#desc-2-2 .sticky-element"),
           }
         }
@@ -359,7 +388,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -378,7 +407,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#desc-2-3.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#desc-2-3 .sticky-element"),
           }
         }
@@ -398,7 +427,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -420,7 +449,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#bio.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#bio .sticky-element"),
           }
         }
@@ -440,7 +469,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -462,7 +491,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#mindset-work-container.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#mindset-work-container .sticky-element"),
           }
         }
@@ -484,7 +513,7 @@ export default function Home() {
             scrub: true,
             start: "top top",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           scale: 1,
           x: 0,
@@ -507,7 +536,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -529,7 +558,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#basket-work-container.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#basket-work-container .sticky-element"),
           }
         }
@@ -551,7 +580,7 @@ export default function Home() {
             scrub: true,
             start: "+=100",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           scale: 1,
           x: 0,
@@ -574,7 +603,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -596,7 +625,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#lovesong-work-container.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#lovesong-work-container .sticky-element"),
           }
         }
@@ -618,7 +647,7 @@ export default function Home() {
             scrub: true,
             start: "+=100",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           scale: 1,
           x: 0,
@@ -641,7 +670,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -663,7 +692,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#shawl-work-container.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#shawl-work-container .sticky-element"),
           }
         }
@@ -685,7 +714,7 @@ export default function Home() {
             scrub: true,
             start: "+=100",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           scale: 1,
           x: 0,
@@ -708,7 +737,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -730,7 +759,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#disappearing-work-container.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#disappearing-work-container .sticky-element"),
           }
         }
@@ -750,7 +779,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -772,7 +801,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#fall-work-container.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#fall-work-container .sticky-element"),
           }
         }
@@ -792,7 +821,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -814,7 +843,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#conditioning-work-container.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#conditioning-work-container .sticky-element"),
           }
         }
@@ -834,7 +863,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -856,7 +885,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#picking-work-container.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#picking-work-container .sticky-element"),
           }
         }
@@ -876,7 +905,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
@@ -898,7 +927,7 @@ export default function Home() {
             start: "center center",
             endTrigger: element.querySelector("#visibility-work-container.sticky-bounding-box"),
             end: "bottom bottom",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
             pin: element.querySelector("#visibility-work-container .sticky-element"),
           }
         }
@@ -918,7 +947,7 @@ export default function Home() {
             scrub: true,
             start: "+=200",
             end: "+=800",
-            invalidateOnRefresh: true,
+            // invalidateOnRefresh: true,
           },
           opacity: 1,
           ease: "power3.inOut",
