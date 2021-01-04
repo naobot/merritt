@@ -9,10 +9,12 @@
   flex-direction: column;
   justify-content: center;
   .text-content {
-    width: 80%;
+    width: 100%;
+    max-width: 1000px;
     blockquote {
       margin-top: 20px;
-      padding-left: 30px;
+      padding: 0 60px;
+      text-align: justify;
     }
   }
 }
@@ -24,6 +26,7 @@
     justify-content: flex-start;
   }
   .text-content {
+    width: 100%;
     max-width: 800px;
     align-self: flex-end;
   }

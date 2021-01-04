@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow-x: hidden;
   /* section within webpage */
   .section {
     display: flex;
@@ -25,7 +26,7 @@
 }
 .sticky-bounding-box {
   // background-color: rgba(255,255,255,0.2);
-  height: 300vh;
+  height: 1800px;
 }
 .sticky-element {
   // border: 1px solid rgba(255,180,189,0.8);
