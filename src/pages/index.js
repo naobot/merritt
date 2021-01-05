@@ -478,8 +478,8 @@ export default function Home() {
     }, []);
   /* end BIO TEXT EFFECTS */
 
-  /* MINDSET EFFECTS */
-    // make Mindset sticky
+  /* mindset EFFECTS */
+    // make mindset video sticky
     useEffect(() => {
       const element = ref.current;
       gsap.to(
@@ -497,42 +497,17 @@ export default function Home() {
         }
       );
     }, []);
-    // adjust Mindset position
+    // fade in mindset video
     useEffect(() => {
       const element = ref.current;
       gsap.fromTo(
-        element.querySelector("#mindset .work-image"),
-        {
-          scale: 0.5,
-          x: -90,
-          y: -120
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#mindset.work"),
-            scrub: true,
-            start: "top top",
-            end: "+=450",
-            // invalidateOnRefresh: true,
-          },
-          scale: 1,
-          x: 0,
-          y: 0,
-          ease: "power3.inOut",
-        }
-      );
-    }, []);
-    // fade in Mindset description
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#mindset .work-desc"),
+        element.querySelector("#mindset-work-container .sticky-element"),
         {
           opacity: 0
         },
         {
           scrollTrigger: {
-            trigger: element.querySelector("#mindset.work"),
+            trigger: element.querySelector("#mindset-work-container.sticky-bounding-box"),
             scrub: true,
             start: "+=200",
             end: "+=450",
@@ -543,10 +518,49 @@ export default function Home() {
         }
       );
     }, []);
-  /* end MINDSET EFFECTS */
+    // make mindset video sticky
+    useEffect(() => {
+      const element = ref.current;
+      gsap.to(
+        element.querySelector("#mindset-desc-container.sticky-bounding-box"),
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#mindset-desc-container .sticky-element"),
+            scrub: true,
+            start: "center center",
+            endTrigger: element.querySelector("#mindset-desc-container.sticky-bounding-box"),
+            end: "bottom bottom",
+            // invalidateOnRefresh: true,
+            pin: element.querySelector("#mindset-desc-container .sticky-element"),
+          }
+        }
+      );
+    }, []);
+    // fade in mindset video
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#mindset-desc-container .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#mindset-desc-container.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=450",
+            // invalidateOnRefresh: true,
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
+  /* end mindset EFFECTS */
 
-  /* BASKET EFFECTS */
-    // make Basket sticky
+  /* basket EFFECTS */
+    // make basket video sticky
     useEffect(() => {
       const element = ref.current;
       gsap.to(
@@ -564,42 +578,17 @@ export default function Home() {
         }
       );
     }, []);
-    // adjust Basket position
+    // fade in basket video
     useEffect(() => {
       const element = ref.current;
       gsap.fromTo(
-        element.querySelector("#basket .work-image"),
-        {
-          scale: 0.5,
-          x: 100,
-          y: 5
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#basket.work"),
-            scrub: true,
-            start: "+=100",
-            end: "+=450",
-            // invalidateOnRefresh: true,
-          },
-          scale: 1,
-          x: 0,
-          y: 0,
-          ease: "power3.inOut",
-        }
-      );
-    }, []);
-    // fade in Basket description
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#basket .work-desc"),
+        element.querySelector("#basket-work-container .sticky-element"),
         {
           opacity: 0
         },
         {
           scrollTrigger: {
-            trigger: element.querySelector("#basket.work"),
+            trigger: element.querySelector("#basket-work-container.sticky-bounding-box"),
             scrub: true,
             start: "+=200",
             end: "+=450",
@@ -610,10 +599,49 @@ export default function Home() {
         }
       );
     }, []);
-  /* end BASKET EFFECTS */
+    // make basket video sticky
+    useEffect(() => {
+      const element = ref.current;
+      gsap.to(
+        element.querySelector("#basket-desc-container.sticky-bounding-box"),
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#basket-desc-container .sticky-element"),
+            scrub: true,
+            start: "center center",
+            endTrigger: element.querySelector("#basket-desc-container.sticky-bounding-box"),
+            end: "bottom bottom",
+            // invalidateOnRefresh: true,
+            pin: element.querySelector("#basket-desc-container .sticky-element"),
+          }
+        }
+      );
+    }, []);
+    // fade in basket video
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#basket-desc-container .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#basket-desc-container.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=450",
+            // invalidateOnRefresh: true,
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
+  /* end basket EFFECTS */
 
-  /* LOVESONG EFFECTS */
-    // make Lovesong sticky
+  /* lovesong EFFECTS */
+    // make lovesong video sticky
     useEffect(() => {
       const element = ref.current;
       gsap.to(
@@ -631,42 +659,17 @@ export default function Home() {
         }
       );
     }, []);
-    // adjust Lovesong position
+    // fade in lovesong video
     useEffect(() => {
       const element = ref.current;
       gsap.fromTo(
-        element.querySelector("#lovesong .work-image"),
-        {
-          scale: 0.5,
-          x: 90,
-          y: 205
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#lovesong.work"),
-            scrub: true,
-            start: "+=100",
-            end: "+=450",
-            // invalidateOnRefresh: true,
-          },
-          scale: 1,
-          x: 0,
-          y: 0,
-          ease: "power3.inOut",
-        }
-      );
-    }, []);
-    // fade in Lovesong description
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#lovesong .work-desc"),
+        element.querySelector("#lovesong-work-container .sticky-element"),
         {
           opacity: 0
         },
         {
           scrollTrigger: {
-            trigger: element.querySelector("#lovesong.work"),
+            trigger: element.querySelector("#lovesong-work-container.sticky-bounding-box"),
             scrub: true,
             start: "+=200",
             end: "+=450",
@@ -677,10 +680,49 @@ export default function Home() {
         }
       );
     }, []);
-  /* end LOVESONG EFFECTS */
+    // make lovesong video sticky
+    useEffect(() => {
+      const element = ref.current;
+      gsap.to(
+        element.querySelector("#lovesong-desc-container.sticky-bounding-box"),
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#lovesong-desc-container .sticky-element"),
+            scrub: true,
+            start: "center center",
+            endTrigger: element.querySelector("#lovesong-desc-container.sticky-bounding-box"),
+            end: "bottom bottom",
+            // invalidateOnRefresh: true,
+            pin: element.querySelector("#lovesong-desc-container .sticky-element"),
+          }
+        }
+      );
+    }, []);
+    // fade in lovesong video
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#lovesong-desc-container .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#lovesong-desc-container.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=450",
+            // invalidateOnRefresh: true,
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
+  /* end lovesong EFFECTS */
 
-  /* SHAWL EFFECTS */
-    // make Shawl sticky
+  /* shawl EFFECTS */
+    // make shawl video sticky
     useEffect(() => {
       const element = ref.current;
       gsap.to(
@@ -698,42 +740,17 @@ export default function Home() {
         }
       );
     }, []);
-    // adjust Shawl position
+    // fade in shawl video
     useEffect(() => {
       const element = ref.current;
       gsap.fromTo(
-        element.querySelector("#shawl .work-image"),
-        {
-          scale: 0.5,
-          x: 30,
-          y: 155
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#shawl.work"),
-            scrub: true,
-            start: "+=100",
-            end: "+=450",
-            // invalidateOnRefresh: true,
-          },
-          scale: 1,
-          x: 0,
-          y: 0,
-          ease: "power3.inOut",
-        }
-      );
-    }, []);
-    // fade in Shawl description
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#shawl .work-desc"),
+        element.querySelector("#shawl-work-container .sticky-element"),
         {
           opacity: 0
         },
         {
           scrollTrigger: {
-            trigger: element.querySelector("#shawl.work"),
+            trigger: element.querySelector("#shawl-work-container.sticky-bounding-box"),
             scrub: true,
             start: "+=200",
             end: "+=450",
@@ -744,7 +761,46 @@ export default function Home() {
         }
       );
     }, []);
-  /* end SHAWL EFFECTS */
+    // make shawl video sticky
+    useEffect(() => {
+      const element = ref.current;
+      gsap.to(
+        element.querySelector("#shawl-desc-container.sticky-bounding-box"),
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#shawl-desc-container .sticky-element"),
+            scrub: true,
+            start: "center center",
+            endTrigger: element.querySelector("#shawl-desc-container.sticky-bounding-box"),
+            end: "bottom bottom",
+            // invalidateOnRefresh: true,
+            pin: element.querySelector("#shawl-desc-container .sticky-element"),
+          }
+        }
+      );
+    }, []);
+    // fade in shawl video
+    useEffect(() => {
+      const element = ref.current;
+      gsap.fromTo(
+        element.querySelector("#shawl-desc-container .sticky-element"),
+        {
+          opacity: 0
+        },
+        {
+          scrollTrigger: {
+            trigger: element.querySelector("#shawl-desc-container.sticky-bounding-box"),
+            scrub: true,
+            start: "+=200",
+            end: "+=450",
+            // invalidateOnRefresh: true,
+          },
+          opacity: 1,
+          ease: "power3.inOut",
+        }
+      );
+    }, []);
+  /* end shawl EFFECTS */
 
   /* DISAPPEARING EFFECTS */
     // make Disappearing video sticky

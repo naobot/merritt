@@ -1,20 +1,20 @@
 @keyframes background-shift {
-    from { background-color: #E8ECD5; }
-    10% { background-color: #c4e8ce; }
-    20% { background-color: #C5DEDA; }
-    30% { background-color: #C4C8D9; }
-    40% { background-color: #e1d6bd; }
-    50% { background-color: #E8ECD5; }
-    60% { background-color: #e1d6bd; }
-    70% { background-color: #C4C8D9; }
-    80% { background-color: #C5DEDA; }
-    90% { background-color: #c4e8ce; }
-    to { background-color: #E8ECD5; }
+    from { background-color: #611C15; }
+    10% { background-color: #712917; }
+    20% { background-color: #4E0A04; }
+    30% { background-color: #3A0C03; }
+    40% { background-color: #2D0C0C; }
+    50% { background-color: #611C15; }
+    60% { background-color: #2D0C0C; }
+    70% { background-color: #3A0C03; }
+    80% { background-color: #4E0A04; }
+    90% { background-color: #712917; }
+    to { background-color: #611C15; }
 }
 
 html {
-  background-color: #f0f2e9;
+  background-color: #611C15;
   animation-name: background-shift;
-  animation-duration: 360s;
+  animation-duration: 300s;
   animation-iteration-count: infinite;
 }

@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: center;
   .text-content {
-    width: 100%;
+    padding: 0 10px;
     max-width: 1000px;
     font-size: typography.$baseSize;
     blockquote {

@@ -42,8 +42,6 @@ export default function LoveSong({ children }) {
   const post = data.allMarkdownRemark.edges[0].node;
   const image = data.file.childImageSharp;
   return (
-    <Section id="lovesong-work-container">
-      <Work id="lovesong" image={image} post={post} />
-    </Section>
+    <Work id="lovesong" image={image} post={post} />
   )
 }

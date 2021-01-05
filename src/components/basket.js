@@ -42,8 +42,6 @@ export default function Basket({ children }) {
   const post = data.allMarkdownRemark.edges[0].node;
   const image = data.file.childImageSharp;
   return (
-    <Section id="basket-work-container">
-      <Work id="basket" image={image} post={post} />
-    </Section>
+    <Work id="basket" image={image} post={post} />
   )
 }

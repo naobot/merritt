@@ -42,8 +42,6 @@ export default function Shawl({ children }) {
   const post = data.allMarkdownRemark.edges[0].node;
   const image = data.file.childImageSharp;
   return (
-    <Section id="shawl-work-container">
-      <Work id="shawl" image={image} post={post} />
-    </Section>
+    <Work id="shawl" image={image} post={post} />
   )
 }
