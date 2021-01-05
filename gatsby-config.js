@@ -11,6 +11,7 @@ module.exports = {
     subtitle: 'Love Song',
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

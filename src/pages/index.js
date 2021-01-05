@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react"
 import { isMobile } from "react-device-detect"
 
+import Helmet from "react-helmet"
 import Landing from "../components/landing"
 import Mindset from "../components/mindset"
 import Introduction from "../components/introduction"
@@ -1014,6 +1015,9 @@ export default function Home() {
 
   return (
     <div className="main-container" ref={ref}>
+      <Helmet>
+        <title>Love Song - Merritt Johnson</title>
+      </Helmet>
 
       <Landing />
 
