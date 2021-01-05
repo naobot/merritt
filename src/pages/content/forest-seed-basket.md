@@ -1,6 +1,6 @@
 ---
 title: "Forest Seed Basket <br/>for present and future understanding, <br/>Black Ash"
-info: "life size, 2019 (handwoven Black Ash, wood)"
+info: "life size, 2019 (handwoven black ash, wood)"
 credit: "Courtesy the artist and Accola Griefen Fine Art. Image courtesy of Patel Brown Gallery"
 ---
 

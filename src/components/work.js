@@ -21,7 +21,7 @@ export default function Work(props) {
         <div
           className="work-info"
           >
-          <em>{props.post.frontmatter.title.replace(/(<([^>]+)>)/gi, "")}</em>.&nbsp;
+          <em>{props.post.frontmatter.title.replace(/(<([^>]+)>)/gi, "")}</em>,&nbsp;
           {props.post.frontmatter.info}.&nbsp;
           {props.post.frontmatter.credit}.
         </div>

@@ -44,7 +44,7 @@ export default function DescriptiveSecond({ children }) {
       <div className="text-container">
         <div className="text-content">
           <p>Embedded within the yearning of any love song is a shadow acknowledgement of the end of all things. The song ends, as do the lives of the singer and the subject, as will systems of dispossession, violence and oppression. Merritt’s Johnson’s <em>Love Song</em> celebrates resilience, connection, and belief in the possibility of alternatives for the present and future.</p> 
-          <p>Below, with <em>Fancy Shawl for the frontlines</em>, Johnson celebrates this labour, creating a kind of armour for those people&mdash;Indigenous women in particular&mdash;who are showing up and doing the work of protecting the land and remaking the world in a good way.</p>
+          <p>Below, with <em>Fancy Shawl for the frontlines</em>, Johnson celebrates this labour, creating a kind of armour for those people &ndash; Indigenous women in particular &ndash; who are showing up and doing the work of protecting the land and remaking the world in a good way.</p>
         </div>
       </div>
     </Section>
