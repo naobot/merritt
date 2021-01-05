@@ -26,7 +26,7 @@ export default function Shawl({ children }) {
           id
           publicURL
           childImageSharp {
-            fluid(maxWidth: 480) {
+            fluid(maxWidth: 800) {
               base64
               aspectRatio
               src

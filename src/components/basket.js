@@ -26,7 +26,7 @@ export default function Basket({ children }) {
           id
           publicURL
           childImageSharp {
-            fluid(maxWidth: 320) {
+            fluid(maxWidth: 800) {
               base64
               aspectRatio
               src
