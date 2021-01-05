@@ -1,6 +1,9 @@
 @use "./responsive.scss";
 @use "./typography.scss";
 
+body {
+  overflow-x: hidden;
+}
 /* contains whole webpage */
 .main-container {
   position: absolute;
@@ -34,7 +37,11 @@
   width: 100%;
   height: fit-content;
 }
-
+@include responsive.responsive(responsive.$small-break) {
+  .section {
+    padding: 0 5px !important;
+  }
+}
 a:link, a:active, a:visited, a:hover {
   color: typography.$baseColor;
 }

@@ -31,8 +31,8 @@ $h5: 2 * $baseSize;
 $h6: 1.5 * $baseSize;
 
 @include responsive.responsive(responsive.$small-break) {
-  p {
-    font-size: $baseSize * 0.7;
+  p, blockquote {
+    font-size: $baseSize * 0.6;
   }
 }
 
