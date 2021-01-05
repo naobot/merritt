@@ -18,7 +18,7 @@ export default function Landing({ children }) {
   return (
       <div className="landing-title">
         <h1><span className="subtitle">Love Song</span><br/>
-        (Merritt Johnson)</h1>
+        (&nbsp;Merritt Johnson&nbsp;)</h1>
         <h3><div>Presented by&nbsp;</div><div>SFU Galleries</div></h3>
         <h3><div>Curated by&nbsp;</div><div>cheyanne turions</div></h3>
       </div>
