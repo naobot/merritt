@@ -1,6 +1,6 @@
 ---
 title: "Love Song <br/>(translation basket)"
-info: "Life size, 2020 (handwoven palm fibre, stethoscope)"
+info: "life size, 2020 (handwoven palm fibre, stethoscope)"
 credit: "Courtesy the artist and Accola Griefen Fine Art"
 ---
 

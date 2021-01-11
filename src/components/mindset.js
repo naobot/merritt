@@ -42,6 +42,8 @@ export default function Mindset() {
   const post = data.allMarkdownRemark.edges[0].node;
   const image = data.file.childImageSharp;
   return (
-    <Work id="mindset" image={image} post={post} />
+    <Section id="mindset-work-container">
+      <Work id="mindset" image={image} post={post} />
+    </Section>
   )
 }

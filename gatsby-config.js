@@ -10,6 +10,7 @@ module.exports = {
     title: 'Merritt Johnson',
     subtitle: 'Love Song',
   },
+  pathPrefix: '/lovesong',
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,

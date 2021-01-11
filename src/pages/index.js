@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react"
 import { isMobile } from "react-device-detect"
+import { Helmet } from "react-helmet"
 
-import Helmet from "react-helmet"
 import Landing from "../components/landing"
 import Mindset from "../components/mindset"
 import Introduction from "../components/introduction"
@@ -104,7 +104,7 @@ export default function Home() {
           scrollTrigger: {
             trigger: element.querySelector("#intro-1.sticky-bounding-box"),
             scrub: false,
-            start: "0",
+            start: "-=200",
             end: "+=300",
             // invalidateOnRefresh: true,
 
@@ -143,8 +143,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#intro-2.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -185,8 +185,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#desc-0-1.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -224,8 +224,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#desc-0-2.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -266,8 +266,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#desc-1-1.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -305,8 +305,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#desc-1-2.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -347,8 +347,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#desc-2-1.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -386,8 +386,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#desc-2-2.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -425,8 +425,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#desc-2-3.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -467,8 +467,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#bio.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -479,8 +479,8 @@ export default function Home() {
     }, []);
   /* end BIO TEXT EFFECTS */
 
-  /* mindset EFFECTS */
-    // make mindset video sticky
+  /* MINDSET EFFECTS */
+    // make Mindset sticky
     useEffect(() => {
       const element = ref.current;
       gsap.to(
@@ -498,19 +498,44 @@ export default function Home() {
         }
       );
     }, []);
-    // fade in mindset video
+    // // adjust Mindset position
+    // useEffect(() => {
+    //   const element = ref.current;
+    //   gsap.fromTo(
+    //     element.querySelector("#mindset .work-image"),
+    //     {
+    //       scale: 0.5,
+    //       x: -90,
+    //       y: -120
+    //     },
+    //     {
+    //       scrollTrigger: {
+    //         trigger: element.querySelector("#mindset.work"),
+    //         scrub: true,
+    //         start: "top top",
+    //         end: "+=450",
+    //         // invalidateOnRefresh: true,
+    //       },
+    //       scale: 1,
+    //       x: 0,
+    //       y: 0,
+    //       ease: "power3.inOut",
+    //     }
+    //   );
+    // }, []);
+    // fade in Mindset description
     useEffect(() => {
       const element = ref.current;
       gsap.fromTo(
-        element.querySelector("#mindset-work-container .sticky-element"),
+        element.querySelector("#mindset .work-desc"),
         {
           opacity: 0
         },
         {
           scrollTrigger: {
-            trigger: element.querySelector("#mindset-work-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            trigger: element.querySelector("#mindset.work"),
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -519,49 +544,10 @@ export default function Home() {
         }
       );
     }, []);
-    // make mindset video sticky
-    useEffect(() => {
-      const element = ref.current;
-      gsap.to(
-        element.querySelector("#mindset-desc-container.sticky-bounding-box"),
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#mindset-desc-container .sticky-element"),
-            scrub: true,
-            start: "center center",
-            endTrigger: element.querySelector("#mindset-desc-container.sticky-bounding-box"),
-            end: "bottom bottom",
-            // invalidateOnRefresh: true,
-            pin: element.querySelector("#mindset-desc-container .sticky-element"),
-          }
-        }
-      );
-    }, []);
-    // fade in mindset video
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#mindset-desc-container .sticky-element"),
-        {
-          opacity: 0
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#mindset-desc-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
-            end: "+=450",
-            // invalidateOnRefresh: true,
-          },
-          opacity: 1,
-          ease: "power3.inOut",
-        }
-      );
-    }, []);
-  /* end mindset EFFECTS */
+  /* end MINDSET EFFECTS */
 
-  /* basket EFFECTS */
-    // make basket video sticky
+  /* BASKET EFFECTS */
+    // make Basket sticky
     useEffect(() => {
       const element = ref.current;
       gsap.to(
@@ -579,19 +565,44 @@ export default function Home() {
         }
       );
     }, []);
-    // fade in basket video
+    // // adjust Basket position
+    // useEffect(() => {
+    //   const element = ref.current;
+    //   gsap.fromTo(
+    //     element.querySelector("#basket .work-image"),
+    //     {
+    //       scale: 0.5,
+    //       x: 100,
+    //       y: 5
+    //     },
+    //     {
+    //       scrollTrigger: {
+    //         trigger: element.querySelector("#basket.work"),
+    //         scrub: true,
+    //         start: "+=100",
+    //         end: "+=450",
+    //         // invalidateOnRefresh: true,
+    //       },
+    //       scale: 1,
+    //       x: 0,
+    //       y: 0,
+    //       ease: "power3.inOut",
+    //     }
+    //   );
+    // }, []);
+    // fade in Basket description
     useEffect(() => {
       const element = ref.current;
       gsap.fromTo(
-        element.querySelector("#basket-work-container .sticky-element"),
+        element.querySelector("#basket .work-desc"),
         {
           opacity: 0
         },
         {
           scrollTrigger: {
-            trigger: element.querySelector("#basket-work-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            trigger: element.querySelector("#basket.work"),
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -600,49 +611,10 @@ export default function Home() {
         }
       );
     }, []);
-    // make basket video sticky
-    useEffect(() => {
-      const element = ref.current;
-      gsap.to(
-        element.querySelector("#basket-desc-container.sticky-bounding-box"),
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#basket-desc-container .sticky-element"),
-            scrub: true,
-            start: "center center",
-            endTrigger: element.querySelector("#basket-desc-container.sticky-bounding-box"),
-            end: "bottom bottom",
-            // invalidateOnRefresh: true,
-            pin: element.querySelector("#basket-desc-container .sticky-element"),
-          }
-        }
-      );
-    }, []);
-    // fade in basket video
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#basket-desc-container .sticky-element"),
-        {
-          opacity: 0
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#basket-desc-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
-            end: "+=450",
-            // invalidateOnRefresh: true,
-          },
-          opacity: 1,
-          ease: "power3.inOut",
-        }
-      );
-    }, []);
-  /* end basket EFFECTS */
+  /* end BASKET EFFECTS */
 
-  /* lovesong EFFECTS */
-    // make lovesong video sticky
+  /* LOVESONG EFFECTS */
+    // make Lovesong sticky
     useEffect(() => {
       const element = ref.current;
       gsap.to(
@@ -660,19 +632,44 @@ export default function Home() {
         }
       );
     }, []);
-    // fade in lovesong video
+    // // adjust Lovesong position
+    // useEffect(() => {
+    //   const element = ref.current;
+    //   gsap.fromTo(
+    //     element.querySelector("#lovesong .work-image"),
+    //     {
+    //       scale: 0.5,
+    //       x: 90,
+    //       y: 205
+    //     },
+    //     {
+    //       scrollTrigger: {
+    //         trigger: element.querySelector("#lovesong.work"),
+    //         scrub: true,
+    //         start: "+=100",
+    //         end: "+=450",
+    //         // invalidateOnRefresh: true,
+    //       },
+    //       scale: 1,
+    //       x: 0,
+    //       y: 0,
+    //       ease: "power3.inOut",
+    //     }
+    //   );
+    // }, []);
+    // fade in Lovesong description
     useEffect(() => {
       const element = ref.current;
       gsap.fromTo(
-        element.querySelector("#lovesong-work-container .sticky-element"),
+        element.querySelector("#lovesong .work-desc"),
         {
           opacity: 0
         },
         {
           scrollTrigger: {
-            trigger: element.querySelector("#lovesong-work-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            trigger: element.querySelector("#lovesong.work"),
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -681,49 +678,10 @@ export default function Home() {
         }
       );
     }, []);
-    // make lovesong video sticky
-    useEffect(() => {
-      const element = ref.current;
-      gsap.to(
-        element.querySelector("#lovesong-desc-container.sticky-bounding-box"),
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#lovesong-desc-container .sticky-element"),
-            scrub: true,
-            start: "center center",
-            endTrigger: element.querySelector("#lovesong-desc-container.sticky-bounding-box"),
-            end: "bottom bottom",
-            // invalidateOnRefresh: true,
-            pin: element.querySelector("#lovesong-desc-container .sticky-element"),
-          }
-        }
-      );
-    }, []);
-    // fade in lovesong video
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#lovesong-desc-container .sticky-element"),
-        {
-          opacity: 0
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#lovesong-desc-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
-            end: "+=450",
-            // invalidateOnRefresh: true,
-          },
-          opacity: 1,
-          ease: "power3.inOut",
-        }
-      );
-    }, []);
-  /* end lovesong EFFECTS */
+  /* end LOVESONG EFFECTS */
 
-  /* shawl EFFECTS */
-    // make shawl video sticky
+  /* SHAWL EFFECTS */
+    // make Shawl sticky
     useEffect(() => {
       const element = ref.current;
       gsap.to(
@@ -741,19 +699,44 @@ export default function Home() {
         }
       );
     }, []);
-    // fade in shawl video
+    // // adjust Shawl position
+    // useEffect(() => {
+    //   const element = ref.current;
+    //   gsap.fromTo(
+    //     element.querySelector("#shawl .work-image"),
+    //     {
+    //       scale: 0.5,
+    //       x: 30,
+    //       y: 155
+    //     },
+    //     {
+    //       scrollTrigger: {
+    //         trigger: element.querySelector("#shawl.work"),
+    //         scrub: true,
+    //         start: "+=100",
+    //         end: "+=450",
+    //         // invalidateOnRefresh: true,
+    //       },
+    //       scale: 1,
+    //       x: 0,
+    //       y: 0,
+    //       ease: "power3.inOut",
+    //     }
+    //   );
+    // }, []);
+    // fade in Shawl description
     useEffect(() => {
       const element = ref.current;
       gsap.fromTo(
-        element.querySelector("#shawl-work-container .sticky-element"),
+        element.querySelector("#shawl .work-desc"),
         {
           opacity: 0
         },
         {
           scrollTrigger: {
-            trigger: element.querySelector("#shawl-work-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            trigger: element.querySelector("#shawl.work"),
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -762,46 +745,7 @@ export default function Home() {
         }
       );
     }, []);
-    // make shawl video sticky
-    useEffect(() => {
-      const element = ref.current;
-      gsap.to(
-        element.querySelector("#shawl-desc-container.sticky-bounding-box"),
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#shawl-desc-container .sticky-element"),
-            scrub: true,
-            start: "center center",
-            endTrigger: element.querySelector("#shawl-desc-container.sticky-bounding-box"),
-            end: "bottom bottom",
-            // invalidateOnRefresh: true,
-            pin: element.querySelector("#shawl-desc-container .sticky-element"),
-          }
-        }
-      );
-    }, []);
-    // fade in shawl video
-    useEffect(() => {
-      const element = ref.current;
-      gsap.fromTo(
-        element.querySelector("#shawl-desc-container .sticky-element"),
-        {
-          opacity: 0
-        },
-        {
-          scrollTrigger: {
-            trigger: element.querySelector("#shawl-desc-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
-            end: "+=450",
-            // invalidateOnRefresh: true,
-          },
-          opacity: 1,
-          ease: "power3.inOut",
-        }
-      );
-    }, []);
-  /* end shawl EFFECTS */
+  /* end SHAWL EFFECTS */
 
   /* DISAPPEARING EFFECTS */
     // make Disappearing video sticky
@@ -833,8 +777,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#disappearing-work-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -875,8 +819,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#fall-work-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -917,8 +861,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#conditioning-work-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -959,8 +903,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#picking-work-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -1001,8 +945,8 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: element.querySelector("#visibility-work-container.sticky-bounding-box"),
-            scrub: true,
-            start: "+=200",
+            scrub: false,
+            start: "-=200",
             end: "+=450",
             // invalidateOnRefresh: true,
           },
@@ -1016,6 +960,7 @@ export default function Home() {
   return (
     <div className="main-container" ref={ref}>
       <Helmet>
+        <meta charSet="utf-8" />
         <title>Love Song - Merritt Johnson</title>
       </Helmet>
 

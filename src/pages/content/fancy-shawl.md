@@ -1,6 +1,6 @@
 ---
 title: "Fancy Shawl <br/>for the frontlines"
-info: "Life size, 2020 (tarp, ribbon, fringe)"
+info: "life size, 2020 (tarp, ribbon, fringe)"
 credit: "Courtesy the artist and Accola Griefen Fine Art"
 ---
 
